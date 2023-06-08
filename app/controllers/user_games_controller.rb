@@ -22,6 +22,7 @@ class UserGamesController < ApplicationController
   end
 
   def progression
-    @user_game.progression = Enigma.count - @enigma
+    @progression = Enigma.all
+    @start = @progression.first
   end
 end

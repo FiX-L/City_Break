@@ -26,7 +26,7 @@ p "CREATE GAMES, ENIGMA, HINTS, POI..."
 game1 = Game.create!(title: "Alerte à Lille ! ", synopsis: "Au cœur de Lille, un danger sans précédent se profile, émanant d'un criminel connu sous le nom du Pélican.
   Ce fou dangereux à pour projet de semer le chaos dans le centre ville de Lille et menance de faire sauter une bombe fabriquée à base d'Orge et de Malt . Vous avez 90 minutes pour l'arreter.
   Si sûr de sa victoire, il a parsemé la ville de mystérieux indices et vous met au défi : saurez-vous déchiffrer ses énigmes et l'arrêter avant que la ville ne sombre dans l'abîme ?
-  Plongez dans une aventure palpitante au cœur de Lille, où chaque monument peut receler un indice crucial. L'heure tourne, chaque seconde compte. Mettez votre sens de l'observation et  votre esprit de déduction à l'épreuve pour déjouer le plan machiavélique du Pélican.", sub_score: 0, poster_url: "URL de l'affiche du jeu 1", max_duration_in_sec: Time.now, winner_code: "à determiner")
+  Plongez dans une aventure palpitante au cœur de Lille, où chaque monument peut receler un indice crucial. L'heure tourne, chaque seconde compte. Mettez votre sens de l'observation et  votre esprit de déduction à l'épreuve pour déjouer le plan machiavélique du Pélican.", sub_score: 0, poster_url: "URL de l'affiche du jeu 1", max_duration_in_sec: 3600, winner_code: "à determiner")
 badge1 = Badge.create!(name: "Novice", description: "Vis ta 1ere histoire et developpes ton esprit d'aventurier", poster_url: "URL de l'affiche 1")
 
 #ETAPE 1 : GARE LILLE FLANDRES

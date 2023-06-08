@@ -1,12 +1,69 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.navbar_game {
+  width: 425px;
+  background-color: #ffffff;
+  overflow: auto;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+/* Navbar links */
+.navbar_game a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: #255050;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+/* Navbar links on mouse-over */
+.navbar_game a:hover {
+  background-color: #a6c3c3;
+}
+
+/* Current/active navbar link */
+
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar_game a {
+    float: none;
+    display: block;
+  }
+}
+
+
+
+.navbar_home {
+  width: 425px;
+  background-color: #ffffff;
+  overflow: auto;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* Navbar links */
+.navbar_home a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: #255050;
+  ;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.navbar_home a:hover {
+  background-color: #a6c3c3;
+}
+
+/* Current/active navbar link */
+
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar_home a {
+    float: none;
+    display: block;
+  }
 }

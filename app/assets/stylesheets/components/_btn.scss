@@ -1,0 +1,34 @@
+.btn_green_jouer{
+  background-color: #255050;
+  text-decoration: none;
+  color: white;
+  width: 20px;
+  display: block;
+  width: 75px;
+  height: 32px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+  &:hover{
+      background-color: #142b2b;
+      transition: background-color 2s ease-out 100ms
+    }
+}
+
+
+.btn_green_suivant {
+  background-color: #255050;
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 90px;
+  height: 32px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 15px;
+  &:hover{
+    background-color: #142b2b;
+    transition: background-color 2s ease-out 100ms
+  }
+}

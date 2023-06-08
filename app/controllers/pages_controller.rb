@@ -4,4 +4,8 @@ class PagesController < ApplicationController
   def home
     @games = Game.all
   end
+
+  def components
+
+  end
 end

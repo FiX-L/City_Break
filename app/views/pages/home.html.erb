@@ -1,11 +1,42 @@
-<h1>Pages#home</h1>
 
-<h2>hello a vous !</h2>
+<div class="content_home">
+  <div class="toplane">
+    <img src="https://imagizer.imageshack.com/v2/976x487q70/r/923/XVhxFH.jpg" alt="">
+<div class="titre">
+    <h2>Selectionnez un scénario !</h2>
+  </div>
+</div>
+<div class="all_games">
+  <div class="Tuto">
 
-<p>Liste des jeux disponible</p>
 
-<% @games.each do |game| %>
+  <h2>Tutorial</h2>
+
+  </div>
+    <div class= "Alerte">
+    <h2>Alerte à <font color="#CE0707"> Lille</font></h2>
+    </div>
+    <div class="Apo">
+    <h2>Apoca<font color="#CE0707"> LILLE</font>pse</h2>
+  </div>
+</div>
+
+
+  <div class="navbar_home">
+    <a href="#"><i class="fa fa-fw fa-user"></i> Profil</a>
+    <a href="#"><i class="fa fa-fw fa-list"></i> Règles</a>
+    <a href="#"><i class="fa fa-fw fa-gear"></i> Réglages</a>
+  </div>
+</div>
+
+
+ <img style = "background" src="https://imagizer.imageshack.com/v2/976x549q70/r/923/imOShy.jpg" alt="Tuto">
+    <img src="https://imagizer.imageshack.com/v2/976x549q50/r/923/lebKg5.jpg" alt="Alerte">
+    <img src="https://imagizer.imageshack.com/v2/816x508q70/r/923/2EW9l4.jpg" alt="Apo"> %>
+
+
 
   <%= link_to game.title, game_path(game) %>
 
 <% end %>
+

@@ -3,9 +3,16 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
 
+  get '/components', to: "pages#components"  #a retirer
+
+  resources :user_game do
+    resources :games
+
+
 
   resources :games do
     resources :user_games, only: [:create]
+
   end
 
   resources :user_games, only: [:show, :update, :create]

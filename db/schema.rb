@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_08_105912) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_08_131413) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,13 +25,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_08_105912) do
   create_table "enigmas", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.bigint "games_id", null: false
-    t.bigint "point_of_interests_id", null: false
     t.string "order"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["games_id"], name: "index_enigmas_on_games_id"
-    t.index ["point_of_interests_id"], name: "index_enigmas_on_point_of_interests_id"
+    t.bigint "game_id"
+    t.bigint "point_of_interest_id"
+    t.index ["game_id"], name: "index_enigmas_on_game_id"
+    t.index ["point_of_interest_id"], name: "index_enigmas_on_point_of_interest_id"
   end
 
   create_table "games", force: :cascade do |t|
@@ -47,10 +47,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_08_105912) do
 
   create_table "hints", force: :cascade do |t|
     t.string "content"
-    t.bigint "enigmas_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["enigmas_id"], name: "index_hints_on_enigmas_id"
+    t.bigint "enigma_id"
+    t.index ["enigma_id"], name: "index_hints_on_enigma_id"
   end
 
   create_table "point_of_interests", force: :cascade do |t|
@@ -62,12 +62,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_08_105912) do
 
   create_table "user_game_hints", force: :cascade do |t|
     t.boolean "is_used", default: true
-    t.bigint "hints_id", null: false
-    t.bigint "user_games_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["hints_id"], name: "index_user_game_hints_on_hints_id"
-    t.index ["user_games_id"], name: "index_user_game_hints_on_user_games_id"
+    t.bigint "hint_id"
+    t.bigint "user_game_id"
+    t.index ["hint_id"], name: "index_user_game_hints_on_hint_id"
+    t.index ["user_game_id"], name: "index_user_game_hints_on_user_game_id"
   end
 
   create_table "user_games", force: :cascade do |t|
@@ -97,11 +97,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_08_105912) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "enigmas", "games", column: "games_id"
-  add_foreign_key "enigmas", "point_of_interests", column: "point_of_interests_id"
-  add_foreign_key "hints", "enigmas", column: "enigmas_id"
-  add_foreign_key "user_game_hints", "hints", column: "hints_id"
-  add_foreign_key "user_game_hints", "user_games", column: "user_games_id"
+  add_foreign_key "enigmas", "games"
+  add_foreign_key "enigmas", "point_of_interests"
+  add_foreign_key "hints", "enigmas"
+  add_foreign_key "user_game_hints", "hints"
+  add_foreign_key "user_game_hints", "user_games"
   add_foreign_key "user_games", "games"
   add_foreign_key "user_games", "users"
 end

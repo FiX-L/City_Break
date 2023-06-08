@@ -4,7 +4,18 @@
 
 <br>
 
-<%= link_to "START GAME",
-  game_user_games_path(@game),
-  data: {turbo_method: :post, turbo_confirm: "Are you sure?"}
-%>
+
+
+
+<% if current_user %>
+  <%= link_to "START GAME",
+    game_user_games_path(@game),
+    data: {turbo_method: :post, turbo_confirm: "Are you sure?"}
+  %>
+<% else %>
+  <%= link_to "START GAME",
+    game_user_games_path(@game),
+    data: {turbo_method: :post}
+  %>
+
+<% end %>

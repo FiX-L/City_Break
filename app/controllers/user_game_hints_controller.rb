@@ -1,0 +1,2 @@
+class UserGameHintsController < ApplicationController
+end

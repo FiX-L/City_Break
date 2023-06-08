@@ -1,0 +1,10 @@
+<h1>Synopsis du jeu</h1>
+
+<%= @game.synopsis %>
+
+<br>
+
+<%= link_to "START GAME",
+  game_user_games_path(@game),
+  data: {turbo_method: :post, turbo_confirm: "Are you sure?"}
+%>

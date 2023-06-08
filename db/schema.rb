@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_07_122930) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_08_105912) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -39,10 +39,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_07_122930) do
     t.text "synopsis"
     t.integer "sub_score"
     t.string "poster_url"
-    t.string "timer"
     t.string "winner_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "max_duration_in_sec"
   end
 
   create_table "hints", force: :cascade do |t|
@@ -71,18 +71,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_07_122930) do
   end
 
   create_table "user_games", force: :cascade do |t|
-    t.bigint "users_id", null: false
-    t.bigint "games_id", null: false
     t.boolean "finish", default: false
     t.integer "progression"
     t.boolean "answered_with_good_answer_enigma", default: false
-    t.string "game_timer"
     t.string "guess_code"
     t.string "end_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["games_id"], name: "index_user_games_on_games_id"
-    t.index ["users_id"], name: "index_user_games_on_users_id"
+    t.bigint "user_id"
+    t.bigint "game_id"
+    t.datetime "end_of_game_time"
+    t.index ["game_id"], name: "index_user_games_on_game_id"
+    t.index ["user_id"], name: "index_user_games_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -102,6 +102,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_07_122930) do
   add_foreign_key "hints", "enigmas", column: "enigmas_id"
   add_foreign_key "user_game_hints", "hints", column: "hints_id"
   add_foreign_key "user_game_hints", "user_games", column: "user_games_id"
-  add_foreign_key "user_games", "games", column: "games_id"
-  add_foreign_key "user_games", "users", column: "users_id"
+  add_foreign_key "user_games", "games"
+  add_foreign_key "user_games", "users"
 end

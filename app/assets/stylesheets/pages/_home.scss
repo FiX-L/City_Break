@@ -1,1 +1,113 @@
 // Specific CSS for your home-page
+
+  .content_home{
+    background-color: black;
+    height: 926px;
+    width: 390px;
+  }
+
+  .toplane img{
+    height: 190px;
+    width: 390px;
+
+
+  }
+
+   .toplane .titre{
+    background-color: black;
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   }
+
+   .toplane .titre h2{
+    color: white;
+    font-size: 24px;
+   }
+
+
+
+   .all_games .Tuto h2{
+    color: white;
+    font-size: 25px;
+    text-shadow: 1px 1px 2px black;
+
+}
+
+
+
+   .all_games .Tuto{
+    background-image: url("https://imagizer.imageshack.com/v2/976x549q70/r/923/imOShy.jpg");
+    height: 185px;
+    width: 390px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+
+
+
+   .all_games .Alerte h2{
+    color: white;
+    font-size: 25px;
+    text-shadow: 1px 1px 2px black;
+}
+
+   .all_games .Alerte{
+
+    background-image: url("https://imagizer.imageshack.com/v2/976x549q50/r/923/lebKg5.jpg");
+    height: 185px;
+    width: 390px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+
+
+
+   .all_games .Apo h2{
+    color: white;
+    font-size: 25px;
+    text-shadow: 1px 1px 2px black;
+}
+
+   .all_games .Apo{
+
+    background-image: url("https://imagizer.imageshack.com/v2/816x508q70/r/923/2EW9l4.jpg");
+    height: 185px;
+    width: 390px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+
+
+   .navbar_home {
+    width: 390px;
+    background-color: #ffffff;
+    overflow: auto;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    height: 55px;
+  }
+
+
+  .navbar_home a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: #255050;
+    ;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .navbar_home a:hover {
+    background-color: #a6c3c3;
+  }

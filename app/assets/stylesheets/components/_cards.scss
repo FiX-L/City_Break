@@ -1,0 +1,39 @@
+.card_enigme{
+  background-color: rgba(223, 216, 202,0.8);
+  margin-top: 40px;
+  width: 340px;
+  height: 270px;
+  border-radius: 30px;
+  text-align: center;
+  padding-top: 10px;
+  color: #105652;
+
+}
+
+.card_jeu_photo{
+  background-color: rgba(223, 216, 202,0.8);
+  margin-top: 40px;
+  width: 340px;
+  height: 300px;
+  border-radius: 30px;
+  text-align: center;
+  padding-top: 10px;
+  color: #105652;
+
+}
+
+.card_jeu_photo .photos{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  margin-right: 60px;
+  padding-left: 58px;
+  margin-top: 22px;
+
+}
+
+.photos img{
+  width: 100px;
+  height: 100px;
+
+}

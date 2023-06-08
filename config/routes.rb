@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
 
+  get '/components', to: "pages#components"  #a retirer
+
   resources :user_game do
     resources :games
   end

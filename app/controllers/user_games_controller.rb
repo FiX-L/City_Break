@@ -1,8 +1,28 @@
 class UserGamesController < ApplicationController
+
+  def index
+    @user_game = current_user.users
+  end
+
+
   def create
-    @hint = hint.all
-    @game = Game.first
-    @user_game = User_Game.create(current_user[:id])
-    redirect_to game_path(@game)
+    @user_game = UserGame.new
+    @user_game.user = current_user
+
+    @user_game.game = Game.find(params[:game_id])
+    @user_game.end_of_game_time = Time.now + @user_game.game.max_duration_in_sec
+    @user_game.end_of_game_time = @user_game.end_of_game_time + 3600
+    @user_game.save!
+    @user_game.save
+    redirect_to user_game_path(@user_game)
+  end
+
+  def show
+    @user_game = UserGame.find(params[:id])
+  end
+
+  def progression
+    @progression = Enigma.all
+    @start = @progression.first
   end
 end

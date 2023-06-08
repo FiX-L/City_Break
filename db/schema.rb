@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_08_131413) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_08_151919) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,11 +25,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_08_131413) do
   create_table "enigmas", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.string "order"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "game_id"
     t.bigint "point_of_interest_id"
+    t.integer "order_in_the_game"
     t.index ["game_id"], name: "index_enigmas_on_game_id"
     t.index ["point_of_interest_id"], name: "index_enigmas_on_point_of_interest_id"
   end

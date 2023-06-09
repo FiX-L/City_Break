@@ -1,6 +1,6 @@
 require "test_helper"
 
-class PointsOfInterestControllerTest < ActionDispatch::IntegrationTest
+class PointsOfInterestsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

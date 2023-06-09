@@ -1,4 +1,4 @@
-class PointsOfInterestController < ApplicationController
+class PointsOfInterestsController < ApplicationController
   def index
     @points_of_interest = PointOfInterest.all
   end

@@ -7,10 +7,14 @@ Rails.application.routes.draw do
 
 
   resources :games do
+    # resources :user_games, only: [:create]
+    # resources :enigmas, only: [:show]
     resources :user_games, only: [:create]
+
   end
 
-  resources :user_games, only: [:show, :update, :create]
+  resources :user_games, only: [:show, :update]
+  resources :enigmas, only: [:show]
 
 
 

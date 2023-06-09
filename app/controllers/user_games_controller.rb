@@ -6,6 +6,7 @@ class UserGamesController < ApplicationController
 
 
   def create
+    raise
     @user_game = UserGame.new
     @user_game.user = current_user
     @user_game.game = Game.find(params[:game_id])

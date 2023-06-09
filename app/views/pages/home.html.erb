@@ -1,4 +1,3 @@
-
 <div class="content_home">
   <div class="toplane">
     <img src="http://imagizer.imageshack.com/v2/976x487q50/r/922/dGtfvR.png" alt="">
@@ -8,34 +7,20 @@
 </div>
 <div class="all_games">
   <div class="Tuto">
-
-
   <h2>Tutorial</h2>
-
   </div>
     <div class= "Alerte">
-    <h2>Alerte à <font color="#CE0707"> Lille</font></h2>
+    <% @games.each do |game| %>
+    <h2><%= link_to "Alerte à Lille", game_path(game), class:"btn_alerte" %></h2>
+    <%end %>
     </div>
     <div class="Apo">
     <h2>Apoca<font color="#CE0707"> LILLE</font>pse</h2>
   </div>
 </div>
-
-
   <div class="navbar_home">
     <a href="#"><i class="fa fa-fw fa-user"></i> Profil</a>
     <a href="#"><i class="fa fa-fw fa-list"></i> Règles</a>
     <a href="#"><i class="fa fa-fw fa-gear"></i> Réglages</a>
   </div>
 </div>
-
-
- <%# <img style = "background" src="https://imagizer.imageshack.com/v2/976x549q70/r/923/imOShy.jpg" alt="Tuto">
-    <img src="https://imagizer.imageshack.com/v2/976x549q50/r/923/lebKg5.jpg" alt="Alerte">
-
-    <img src="https://imagizer.imageshack.com/v2/816x508q70/r/923/2EW9l4.jpg" alt="Apo">
-
-<% @games.each do |game| %>
-  <%= link_to game.title, game_path(game) %>
-<% end %>
-

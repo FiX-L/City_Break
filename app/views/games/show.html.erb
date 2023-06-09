@@ -9,8 +9,8 @@
 
 <% if current_user %>
   <%= link_to "START GAME",
-    game_user_games_path(@game),
-    data: {turbo_method: :post, turbo_confirm: "Are you sure?"}
+    enigma_path(@game.enigmas.first.id),
+    data: { turbo_confirm: "Are you sure?"}
   %>
 <% else %>
   <%= link_to "START GAME",

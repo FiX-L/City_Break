@@ -1,6 +1,7 @@
 # nettoyage de la base de données
 
 p "DESTROYING ALL DATAS"
+Answer.destroy_all
 UserGameHint.destroy_all
 UserGame.destroy_all
 Hint.destroy_all
@@ -33,6 +34,11 @@ badge1 = Badge.create!(name: "Novice", description: "Vis ta 1ere histoire et dev
 poi1 = PointOfInterest.create!(anecdote: "Fondée en 1921, la brasserie régionale Pélican est plus connue aujourd’hui sous le nom de Pelforth.", poster_url: "URL de l'affiche PELICAN")
 enigma1 = Enigma.create!(title: "Gare Lille Flandres", description: "Du fer part le voyage, où Flandres te reçoit, Cherche sur les façades, l'oiseau qu'on ne voit. Sa présence révèle le début de l'histoire.", game_id: game1.id, point_of_interest_id: poi1.id, order_in_the_game: 1)
 hint1 = Hint.create!(content: "Quand de Flandres tu sors, tourne ton regard à gauche. Au Pélican fixe ton attention, C'est lui qui lance cette mission.", enigma_id: enigma1.id)
+
+answer1 = Answer.create(enigma_id: enigma1.id, is_good_answer: true, content: "goodanswer", poster_url: "https://previews.123rf.com/images/searagen/searagen1503/searagen150300015/37958431-une-gargouille-c%C3%A9l%C3%A8bre-de-l-avenue-de-gargouilles-sur-la-fa%C3%A7ade-de-notre-dame-la-cr%C3%A9ature-est-%C3%A0-la.jpg")
+answer2 = Answer.create(enigma_id: enigma1.id, is_good_answer: false, content: "falseanswer", poster_url: "https://previews.123rf.com/images/searagen/searagen1503/searagen150300015/37958431-une-gargouille-c%C3%A9l%C3%A8bre-de-l-avenue-de-gargouilles-sur-la-fa%C3%A7ade-de-notre-dame-la-cr%C3%A9ature-est-%C3%A0-la.jpg")
+answer3 = Answer.create(enigma_id: enigma1.id, is_good_answer: false, content: "falseanswer", poster_url: "https://previews.123rf.com/images/searagen/searagen1503/searagen150300015/37958431-une-gargouille-c%C3%A9l%C3%A8bre-de-l-avenue-de-gargouilles-sur-la-fa%C3%A7ade-de-notre-dame-la-cr%C3%A9ature-est-%C3%A0-la.jpg")
+answer4 = Answer.create(enigma_id: enigma1.id, is_good_answer: false, content: "falseanswer", poster_url: "https://previews.123rf.com/images/searagen/searagen1503/searagen150300015/37958431-une-gargouille-c%C3%A9l%C3%A8bre-de-l-avenue-de-gargouilles-sur-la-fa%C3%A7ade-de-notre-dame-la-cr%C3%A9ature-est-%C3%A0-la.jpg")
 
 
 #ETAPE 2 : PLACE DE L'OPERA

@@ -10,9 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_08_151919) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_09_091334) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.string "content"
+    t.string "poster_url"
+    t.bigint "enigma_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "is_good_answer"
+    t.index ["enigma_id"], name: "index_answers_on_enigma_id"
+  end
 
   create_table "badges", force: :cascade do |t|
     t.string "name"
@@ -97,6 +107,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_08_151919) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "answers", "enigmas"
   add_foreign_key "enigmas", "games"
   add_foreign_key "enigmas", "point_of_interests"
   add_foreign_key "hints", "enigmas"

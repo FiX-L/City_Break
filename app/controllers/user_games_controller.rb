@@ -17,6 +17,7 @@ class UserGamesController < ApplicationController
 
   def show
     @user_game = UserGame.find(params[:id])
+    @enigmas = Enigma.where(game_id: @user_game.game.id)
   end
 
   def progression

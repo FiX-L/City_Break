@@ -1,0 +1,39 @@
+
+
+<div class= "card_enigme">
+
+<h1><%= @enigma.title %></h1>
+<p><%= @enigma.description %></p>
+
+
+<div class="card_jeu_photo">
+  <div class ="infos">
+    <h3>Validez votre choix</h3>
+  </div>
+  <% @enigma.answers.each do |answer| %>
+    <% if answer.is_good_answer %>
+      <% if  @enigma.point_of_interest.exist? %>
+        <%= link_to point_of_interest_path(@enigma.point_of_interest) do %>
+          <div class ="photos" style="background-image: url('<%= answer.poster_url %>');">
+            <%= answer.content %>
+          </div>
+        <% end %>
+
+        <% else %>
+          <%= link_to enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1)) do %>
+          <div class ="photos" style="background-image: url('<%= answer.poster_url %>');">
+            <%= answer.content %>
+          </div>
+          <% end %>
+        <% end %>
+      <% else %>
+
+        <%= link_to game_path(@enigma.game) do %>
+          <div class ="photos" style="background-image: url('<%= answer.poster_url %>');">
+            <%= answer.content %>
+          </div>
+        <% end %>
+      <% end %>
+     <% end %>
+    </div>
+</div>

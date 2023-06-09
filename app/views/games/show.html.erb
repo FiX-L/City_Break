@@ -1,3 +1,4 @@
+
 <div class="principal-synop">
   <div class="synopsis-font">
       <div class= "Alerte-synop">
@@ -7,7 +8,9 @@
         <%= @game.synopsis %>
       </div>
       <div class="btn-cickable">
-      <a class = "btn_green_jouer", <%= link_to "Jouer", game_user_games_path(@game), data: {turbo_method: :post, turbo_confirm: "Prêt pour l'aventure?"} %></a>
+      <a class = "btn_green_jouer", <%= link_to "Jouer", enigma_path(@game.enigmas.first.id),
+    data: { turbo_confirm: "Are you sure?"}
+  %></a>
       </div>
   </div>
   <div class="navbar_game">
@@ -17,3 +20,4 @@
     <a href="#"><i class="fa fa-fw fa-bomb"></i> Bombe</a>
   </div>
 </div>
+

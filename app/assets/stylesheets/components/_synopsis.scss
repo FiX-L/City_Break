@@ -1,0 +1,35 @@
+
+.synopsis-font{
+  background-color: #545454;
+  background-image: url(http://imagizer.imageshack.com/v2/976x549q70/r/922/ZwOQcn.png);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+}
+
+.Alerte-synop{
+  display: flex;
+  justify-content: center;
+  color: #DFD8CA;
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
+.synopsis{
+  border: solid #DFD8CA;
+  background-color: #000000;
+  color: #DFD8CA;
+  border-radius: 5px;
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px;
+}
+
+.btn-cickable{
+  display: flex;
+  justify-content: center;
+}

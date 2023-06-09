@@ -3,12 +3,14 @@
   .content_home{
     background-color: black;
     height: 926px;
-    width: 390px;
+    // width: 390px;
+    width: 100%;
   }
 
   .toplane img{
     height: 190px;
-    width: 390px;
+    // width: 390px;
+    width: 100%;
 
 
   }
@@ -41,7 +43,8 @@
    .all_games .Tuto{
     background-image: url("http://imagizer.imageshack.com/v2/976x549q70/r/923/2fVN8E.png");
     height: 185px;
-    width: 390px;
+    // width: 390px;
+    width: 100%;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -50,17 +53,30 @@
 
 
 
-   .all_games .Alerte h2{
-    color: white;
+//   //  .all_games .Alerte h2{
+//   //   color: white;
+//   //   font-size: 25px;
+//   //   text-shadow: 1px 1px 2px black;
+//   //   text-decoration: none;
+// }
+
+.btn_alerte{
+  color: white;
     font-size: 25px;
     text-shadow: 1px 1px 2px black;
+    text-decoration: none;
+    &:hover{
+      color: red;
+    }
+
 }
 
    .all_games .Alerte{
 
     background-image: url("http://imagizer.imageshack.com/v2/976x549q70/r/922/ZwOQcn.png");
     height: 185px;
-    width: 390px;
+    // width: 390px;
+    width: 100%;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -79,7 +95,8 @@
 
     background-image: url("http://imagizer.imageshack.com/v2/976x463q70/r/922/1ICBFF.png");
     height: 185px;
-    width: 390px;
+    // width: 390px;
+    width: 100%;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -88,7 +105,8 @@
 
 
    .navbar_home {
-    width: 390px;
+    // width: 390px;
+    width: 100%;
     background-color: #ffffff;
     overflow: auto;
     align-content: center;

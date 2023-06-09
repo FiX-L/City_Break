@@ -10,3 +10,10 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+@media (min-width: 992px) {
+  .big_content {
+    width: 30%;
+    margin: 0 auto;
+  }
+}

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
 
   get '/components', to: "pages#components"  #a retirer
-
+  get '/rules', to: "pages#rules"
 
   resources :games do
     # resources :user_games, only: [:create]

@@ -1,7 +1,11 @@
 .navbar_game {
-  width: 425px;
+  width: 100%;
   background-color: #ffffff;
   overflow: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 /* Navbar links */

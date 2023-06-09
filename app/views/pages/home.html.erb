@@ -32,11 +32,8 @@
 
  <img style = "background" src="https://imagizer.imageshack.com/v2/976x549q70/r/923/imOShy.jpg" alt="Tuto">
     <img src="https://imagizer.imageshack.com/v2/976x549q50/r/923/lebKg5.jpg" alt="Alerte">
-    <img src="https://imagizer.imageshack.com/v2/816x508q70/r/923/2EW9l4.jpg" alt="Apo"> %>
+    <img src="https://imagizer.imageshack.com/v2/816x508q70/r/923/2EW9l4.jpg" alt="Apo">
 
-
-
+<% @games.each do |game| %>
   <%= link_to game.title, game_path(game) %>
-
 <% end %>
-

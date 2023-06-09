@@ -8,7 +8,6 @@ Rails.application.routes.draw do
 
   resources :games do
     resources :user_games, only: [:create]
-
   end
 
   resources :user_games, only: [:show, :update, :create]

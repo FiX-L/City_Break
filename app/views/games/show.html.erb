@@ -1,23 +1,25 @@
 
-<div class="principal-synop">
-  <div class="synopsis-font">
-      <div class= "Alerte-synop">
-        <h2>Alerte à Lille</h2>
-      </div>
-      <div class="synopsis">
-        <%= @game.synopsis %>
-      </div>
-      <div class="btn-cickable">
-      <a class = "btn_green_jouer", <%= link_to "Jouer", enigma_path(@game.enigmas.first.id),
-    data: { turbo_confirm: "Are you sure?"}
-  %></a>
-      </div>
+
+
+
+<div class="content_synopsis">
+  <div class= "card_synopsis">
+    <div class= "card_synopsis_infos">
+    <h2>Alerte à Lille !</h2>
+    <p>Lorem ipsum dolor sit a</p>
+    </div>
   </div>
-  <div class="navbar_game">
+
+      <div>
+     <a class = "btn_green_jouer", <%= link_to "Jouer", game_user_games_path(@game), data: {turbo_method: :post, turbo_confirm: "Are you sure?"} %>> </a>
+    </div>
+
+
+
+    <div class="navbar_game">
     <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
     <a href="#"><i class="fa fa-fw fa-user"></i> Profil</a>
     <a href="#"><i class="fa fa-fw fa-circle-info"></i> Indices</a>
     <a href="#"><i class="fa fa-fw fa-bomb"></i> Bombe</a>
-  </div>
+    </div>
 </div>
-

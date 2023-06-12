@@ -2,6 +2,7 @@
   <h1><%= @enigma.title %></h1>
   <p><%= @enigma.description %></p>
 
+
   <div class="card_jeu_photo">
     <div class="infos">
       <h3>Validez votre choix ! </h3>
@@ -15,6 +16,7 @@
               <%= answer.content %>
             </div>
           <% end %>
+
         <% else %>
           <%= link_to enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1)) do %>
             <div class="photos" style="background-image: url('<%= answer.poster_url %>');">
@@ -23,9 +25,19 @@
           <% end %>
         <% end %>
       <% else %>
-<%= link_to "False Answer", false_answer_popup_enigma_path(@enigma), class: "false-answer-button", remote: true %>
+        <%= link_to "False Answer", false_answer_popup_enigma_path(@enigma), class: "false-answer-button", remote: true %>
       <% end %>
     <% end %>
+    <%= link_to "Indice", hint_popup_enigma_path(@enigma), class: "hint-button", remote: true %>
   </div>
-  <%= link_to "Indice", hint_popup_enigma_path(@enigma), class: "hint-button", remote: true %>
+<div class="navbar_game">
+
+    <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="#"><i class="fa fa-fw fa-user"></i> Profil</a>
+    <a href="#"><i class="fa fa-fw fa-circle-info"></i> Indices</a>
+    <a href="#"><i class="fa fa-fw fa-bomb"></i> Bombe</a>
+
+
+  </div>
+
 </div>

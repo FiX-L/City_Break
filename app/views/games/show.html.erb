@@ -5,19 +5,26 @@
         <h2>Alerte à Lille</h2>
       </div>
       <div class="synopsis">
-        <%= @game.synopsis %>
+        <p><%= @game.synopsis %></p>
       </div>
       <div class="btn-cickable">
       <a class = "btn_green_jouer", <%= link_to "Jouer", enigma_path(@game.enigmas.first.id),
     data: { turbo_confirm: "Are you sure?"}
-  %></a>
+  %>></a>
       </div>
   </div>
+
+
   <div class="navbar_game">
-    <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
-    <a href="#"><i class="fa fa-fw fa-user"></i> Profil</a>
+    <%= link_to home_path do %>
+      <i class="fa fa-fw fa-home"></i>Home
+    <% end %>
+  <%= link_to profil_path do %>
+      <i class="fa fa-fw fa-user"></i> Profil
+    <% end %>
     <a href="#"><i class="fa fa-fw fa-circle-info"></i> Indices</a>
-    <a href="#"><i class="fa fa-fw fa-bomb"></i> Bombe</a>
+    <%= link_to bombe_path do %>
+      <i class="fa fa-fw fa-bomb"></i> Bombe
+    <% end %>
   </div>
 </div>
-

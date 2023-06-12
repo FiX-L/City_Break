@@ -2,9 +2,14 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
 
-
+  get '/home', to: "pages#home"
   get '/components', to: "pages#components"  #a retirer
   get '/rules', to: "pages#rules"
+  get '/tutoriel', to: "pages#tutoriel"
+  get '/reglages', to: "pages#reglages"
+  get '/profil', to: "pages#profil"
+  get '/bombe', to: "pages#bombe"
+  get '/hint', to: "pages#hint"
 
   resources :games do
     # resources :user_games, only: [:create]

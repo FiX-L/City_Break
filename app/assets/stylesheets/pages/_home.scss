@@ -31,12 +31,12 @@
 
 
 
-   .all_games .Tuto h2{
+   .all_games .Tuto a{
     color: white;
     font-size: 25px;
     text-shadow: 1px 1px 2px black;
-
-}
+    text-decoration: none;
+   }
 
 
 
@@ -102,30 +102,3 @@
     align-items: center;
     justify-content: center;
    }
-
-
-   .navbar_home {
-    // width: 390px;
-    width: 100%;
-    background-color: #ffffff;
-    overflow: auto;
-    align-content: center;
-    display: flex;
-    justify-content: center;
-    height: 55px;
-  }
-
-
-  .navbar_home a {
-    float: left;
-    text-align: center;
-    padding: 12px;
-    color: #255050;
-    ;
-    text-decoration: none;
-    font-size: 17px;
-  }
-
-  .navbar_home a:hover {
-    background-color: #a6c3c3;
-  }

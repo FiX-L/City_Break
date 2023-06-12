@@ -1,24 +1,66 @@
+.content_cards{
+  background-image: url(https://imagizer.imageshack.com/img924/5665/QGG1XO.jpg);
+  background-attachment: fixed;
+  object-fit: cover;
+  overflow-y: auto;
+  margin-bottom: 50px;
+}
+
+
+
 .card_enigme{
-  background-color: rgba(223, 216, 202,0.8);
-  margin-top: 40px;
-  width: 340px;
-  height: 270px;
+  background-color: rgba(223, 216, 202, 0.8);
+  width: 280px;
+  height: 370px;
   border-radius: 30px;
   text-align: center;
   padding-top: 10px;
   color: #105652;
+  margin:auto;
+  margin-top: 110px;
+}
+
+
+
+
+
+.card_enigme h1{
+  font-size: 45px;
+  font-weight: bold;
 
 }
 
+.card_enigme p{
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: 30px;
+  margin-right: 10px;
+}
+//   overflow: hidden;
+//   border-right: .15em solid #105652;
+//   white-space: nowrap;
+//   animation:
+//   typing 1s steps(80, end) forwards;
+//   font-size: 1.6rem;
+//   width: 0;
+// }
+// @keyframes typing {
+//   from { width: 0 }
+//   to { width: 100% }
+// }
+
+
+
 .card_jeu_photo{
-  background-color: rgba(223, 216, 202,0.8);
-  margin-top: 40px;
-  width: 340px;
+  background-color: rgba(223, 216, 202, 0.8);
+  margin-top: 50px;
+  width: 280px;
   height: 300px;
   border-radius: 30px;
   text-align: center;
-  padding-top: 10px;
   color: #105652;
+  margin: 60px auto;
+
 
 }
 
@@ -30,6 +72,14 @@
   padding-left: 58px;
   margin-top: 22px;
 
+}
+
+.card_jeu_photo h3{
+  text-align: center;
+  font-size: 35px;
+  margin-top: 24px;
+  padding-top: 8px;
+  font-weight: bold;
 }
 
 .photos img{

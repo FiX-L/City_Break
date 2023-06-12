@@ -1,23 +1,34 @@
 
 .synopsis-font{
-  background-color: #545454;
-  background-image: url(http://imagizer.imageshack.com/v2/976x549q70/r/922/ZwOQcn.png);
-  background-size: cover;
 
-  justify-content: center;
+  background-image: url(http://imagizer.imageshack.com/v2/976x549q70/r/922/ZwOQcn.png);
+  background-attachment: fixed;
+  object-fit: cover;
+  overflow-y: scroll;
+  margin-bottom: 50px;
 }
 
 .Alerte-synop{
   display: flex;
   justify-content: center;
-  color: #DFD8CA;
-  padding-top: 80px;
+  color: #ffffff;
+  padding-top: 30px;
   padding-bottom: 20px;
+}
+
+.Alerte-synop h2{
+  font-size:40px;
+  font-weight: bold;
+}
+
+.synopsis p{
+  font-size:18px;
+
 }
 
 .synopsis{
   border: solid #DFD8CA;
-  background-color: #000000;
+  background-color: rgba(0,0,0,0.8);
   color: #DFD8CA;
   border-radius: 5px;
   text-align: center;
@@ -25,10 +36,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 32px;
+  margin: 30px;
+  margin-top: 30px;
+
 }
 
 .btn-cickable{
   display: flex;
   justify-content: center;
+  padding-bottom: 30px;
 }

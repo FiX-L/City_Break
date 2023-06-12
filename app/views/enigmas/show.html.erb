@@ -12,13 +12,12 @@
   </div>
   <% @enigma.answers.each do |answer| %>
     <% if answer.is_good_answer %>
-      <% if  @enigma.point_of_interest.exist? %>
+      <% if  @enigma.point_of_interest.exists? %>
         <%= link_to point_of_interest_path(@enigma.point_of_interest) do %>
           <div class ="photos" style="background-image: url('<%= answer.poster_url %>');">
             <%= answer.content %>
           </div>
         <% end %>
-
         <% else %>
           <%= link_to enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1)) do %>
           <div class ="photos" style="background-image: url('<%= answer.poster_url %>');">

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_09_091334) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_12_070948) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -68,6 +68,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_09_091334) do
     t.string "poster_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "enigma_id"
+    t.index ["enigma_id"], name: "index_point_of_interests_on_enigma_id"
   end
 
   create_table "user_game_hints", force: :cascade do |t|
@@ -111,6 +113,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_09_091334) do
   add_foreign_key "enigmas", "games"
   add_foreign_key "enigmas", "point_of_interests"
   add_foreign_key "hints", "enigmas"
+  add_foreign_key "point_of_interests", "enigmas"
   add_foreign_key "user_game_hints", "hints"
   add_foreign_key "user_game_hints", "user_games"
   add_foreign_key "user_games", "games"

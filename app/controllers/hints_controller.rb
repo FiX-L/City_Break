@@ -1,6 +1,11 @@
 class HintsController < ApplicationController
+  before_action :set_point_of_interest, only: [:show]
+
   def index
     @hints = Hint.all
+  end
+
+  def show
   end
 
   private

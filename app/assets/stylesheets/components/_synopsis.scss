@@ -1,11 +1,16 @@
 
 .synopsis-font{
 
-  background-image: url(http://imagizer.imageshack.com/v2/976x549q70/r/922/ZwOQcn.png);
+  background-image: url(https://imagizer.imageshack.com/img922/4516/YDwAGh.jpg);
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  object-fit: cover;
-  overflow-y: scroll;
+  background-position: center;
+  background-size: auto 100%;
+  overflow-y: auto;
   margin-bottom: 50px;
+  margin-top: 320px;
+
+
 }
 
 .Alerte-synop{
@@ -37,7 +42,7 @@
   justify-content: center;
   align-items: center;
   margin: 30px;
-  margin-top: 30px;
+  margin-top: 10px;
 
 }
 

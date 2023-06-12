@@ -6,9 +6,7 @@ class EnigmasController < ApplicationController
   end
 
   def show
-    # @enigma = Enigma.find(params[:id])
     @answers = @enigma.answers
-
   end
 
   def new

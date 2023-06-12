@@ -1,0 +1,14 @@
+<h1>BRAVO !</h1>
+<h1><%=@point_of_interest.titre %></h1>
+
+
+<p><%= @point_of_interest.anecdote %></p>
+
+<div class="poster">
+  <%# image_tag @point_of_interest.poster_url %>
+</div>
+
+<h1>Prochaine étape</h1>
+<p><%= @point_of_interest.indication_next_step %></p>
+
+<%= link_to "next" ,enigma_path(Enigma.find_by_order_in_the_game(@point_of_interest.enigma.order_in_the_game + 1))%>

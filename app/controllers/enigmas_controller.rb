@@ -13,6 +13,7 @@ class EnigmasController < ApplicationController
     @enigma = Enigma.new
   end
 
+
   def create
     @enigma = Enigma.new(enigma_params)
 

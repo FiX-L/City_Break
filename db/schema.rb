@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_12_070948) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_12_122328) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -69,6 +69,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_12_070948) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "enigma_id"
+    t.text "titre"
+    t.text "indication_next_step"
     t.index ["enigma_id"], name: "index_point_of_interests_on_enigma_id"
   end
 

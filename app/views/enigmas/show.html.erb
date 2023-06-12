@@ -1,3 +1,7 @@
+<div class="card_enigme">
+  <h1><%= @enigma.title %></h1>
+  <p><%= @enigma.description %></p>
+
 
 <div class="content_cards">
 <br>
@@ -25,34 +29,52 @@
             <%= answer.content %>
           </div>
         <% end %>
+
+
+  <div class="card_jeu_photo">
+    <div class="infos">
+      <h3>Validez votre choix ! </h3>
+    </div>
+
+    <% @enigma.answers.each do |answer| %>
+      <% if answer.is_good_answer %>
+        <% if @enigma.point_of_interest %>
+          <%= link_to point_of_interest_path(@enigma.point_of_interest) do %>
+            <div class="photos" style="background-image: url('<%= answer.poster_url %>');">
+              <%= answer.content %>
+            </div>
+          <% end %>
+
+
         <% else %>
           <%= link_to enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1)) do %>
-          <div class ="photos" style="background-image: url('<%= answer.poster_url %>');">
-            <%= answer.content %>
-          </div>
+            <div class="photos" style="background-image: url('<%= answer.poster_url %>');">
+              <%= answer.content %>
+            </div>
           <% end %>
         <% end %>
       <% else %>
-
-        <%= link_to game_path(@enigma.game) do %>
-          <div class ="photos" style="background-image: url('<%= answer.poster_url %>');">
-            <%= answer.content %>
-          </div>
-        <% end %>
+        <%= link_to "False Answer", false_answer_popup_enigma_path(@enigma), class: "false-answer-button", remote: true %>
       <% end %>
+
      <% end %>
 
 
     </div>
 
 
-
-</div>
+    <% end %>
+    <%= link_to "Indice", hint_popup_enigma_path(@enigma), class: "hint-button", remote: true %>
+  </div>
 <div class="navbar_game">
 
-  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
-  <a href="#"><i class="fa fa-fw fa-user"></i> Profil</a>
-  <a href="#"><i class="fa fa-fw fa-circle-info"></i> Indices</a>
-  <a href="#"><i class="fa fa-fw fa-bomb"></i> Bombe</a>
+
+    <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="#"><i class="fa fa-fw fa-user"></i> Profil</a>
+    <a href="#"><i class="fa fa-fw fa-circle-info"></i> Indices</a>
+    <a href="#"><i class="fa fa-fw fa-bomb"></i> Bombe</a>
+
+
+  </div>
 
 </div>

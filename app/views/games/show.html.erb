@@ -8,9 +8,7 @@
         <p><%= @game.synopsis %></p>
       </div>
       <div class="btn-cickable">
-      <a class = "btn_green_jouer", <%= link_to "Jouer", enigma_path(@game.enigmas.first.id),
-    data: { turbo_confirm: "Are you sure?"}
-  %>></a>
+      <a class = "btn_green_jouer", <%= link_to "Jouer", enigma_path(@game.enigmas.first.id), data: { turbo_confirm: "Are you sure?"} %>></a>
       </div>
   </div>
 

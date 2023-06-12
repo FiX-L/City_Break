@@ -1,24 +1,30 @@
-.content_cards{
+.content_cards {
+  position: relative;
   background-image: url(https://imagizer.imageshack.com/img924/5665/QGG1XO.jpg);
-  background-attachment: fixed;
-  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   overflow-y: auto;
-  margin-bottom: 0
+  margin-bottom: 0;
+  width: 450px;
 }
 
+.card_enigme-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 
-
-.card_enigme{
+.card_enigme {
   background-color: rgba(223, 216, 202, 0.8);
   width: 320px;
-  // height: 370px;
+  min-height: 100%;
   border-radius: 30px;
   text-align: center;
   padding-top: 10px;
   color: #105652;
-  margin:auto;
   margin-top: 110px;
-  transition:  0.3s ease;
 }
 
 .card_enigme h1{

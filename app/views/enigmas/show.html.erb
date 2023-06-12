@@ -3,6 +3,34 @@
   <p><%= @enigma.description %></p>
 
 
+<div class="content_cards">
+<br>
+
+
+
+  <div class="card_enigme">
+    <h1><%= @enigma.title %></h1>
+    <p><%= @enigma.description %></p>
+    <br>
+  </div>
+
+
+
+
+<div class="card_jeu_photo">
+  <div class ="infos">
+    <h3>Validez votre choix ! </h3>
+  </div>
+  <% @enigma.answers.each do |answer| %>
+    <% if answer.is_good_answer %>
+      <% if  @enigma.point_of_interest.exists? %>
+        <%= link_to point_of_interest_path(@enigma.point_of_interest) do %>
+          <div class ="photos" style="background-image: url('<%= answer.poster_url %>');">
+            <%= answer.content %>
+          </div>
+        <% end %>
+
+
   <div class="card_jeu_photo">
     <div class="infos">
       <h3>Validez votre choix ! </h3>
@@ -17,6 +45,7 @@
             </div>
           <% end %>
 
+
         <% else %>
           <%= link_to enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1)) do %>
             <div class="photos" style="background-image: url('<%= answer.poster_url %>');">
@@ -27,10 +56,18 @@
       <% else %>
         <%= link_to "False Answer", false_answer_popup_enigma_path(@enigma), class: "false-answer-button", remote: true %>
       <% end %>
+
+     <% end %>
+
+
+    </div>
+
+
     <% end %>
     <%= link_to "Indice", hint_popup_enigma_path(@enigma), class: "hint-button", remote: true %>
   </div>
 <div class="navbar_game">
+
 
     <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
     <a href="#"><i class="fa fa-fw fa-user"></i> Profil</a>

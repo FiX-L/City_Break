@@ -16,6 +16,13 @@ Rails.application.routes.draw do
   resources :user_games, only: [:show, :update]
   resources :enigmas, only: [:show]
 
+  resources :enigmas do
+    member do
+      get 'false_answer_popup'
+    end
+  end
+
+resources :point_of_interests, only: [:show]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

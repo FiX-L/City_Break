@@ -1,7 +1,12 @@
-class PointsOfInterestsController < ApplicationController
+class PointOfInterestsController < ApplicationController
+  before_action :set_point_of_interest, only: [:show]
   def index
     @points_of_interest = PointOfInterest.all
   end
+
+  def show
+  end
+
 
   private
 

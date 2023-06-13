@@ -1,28 +1,27 @@
-
-<div class="principal-synop">
-  <div class="synopsis-font">
-      <div class= "Alerte-synop">
-        <h2>Alerte à Lille</h2>
-      </div>
-      <div class="synopsis">
-        <p><%= @game.synopsis %></p>
-      </div>
-      <div class="btn-cickable">
-      <a class = "btn_green_jouer", <%= link_to "Jouer", enigma_path(@game.enigmas.first.id), data: { turbo_confirm: "Are you sure?"} %>></a>
-      </div>
+<div class="big-content">
+  <div class="principal-synop">
+    <div class="synopsis-font">
+        <div class= "Alerte-synop">
+          <h2>Alerte à Lille</h2>
+        </div>
+        <div class="synopsis">
+          <p><%= @game.synopsis %></p>
+        </div>
+        <div class="btn-cickable">
+        <a class = "btn_green_jouer", <%= link_to "Jouer", enigma_path(@game.enigmas.first.id), data: { turbo_confirm: "Are you sure?"} %>></a>
+        </div>
+    </div>
   </div>
-
-
-  <div class="navbar_game">
-    <%= link_to home_path do %>
-      <i class="fa fa-fw fa-home"></i>Home
-    <% end %>
-  <%= link_to profil_path do %>
-      <i class="fa fa-fw fa-user"></i> Profil
-    <% end %>
-    <a href="#"><i class="fa fa-fw fa-circle-info"></i> Indices</a>
-    <%= link_to bombe_path do %>
-      <i class="fa fa-fw fa-bomb"></i> Bombe
-    <% end %>
-  </div>
+</div>
+<div class="navbar_game">
+  <%= link_to home_path do %>
+    <i class="fa fa-fw fa-home"></i>Home
+  <% end %>
+<%= link_to profil_path do %>
+    <i class="fa fa-fw fa-user"></i> Profil
+  <% end %>
+  <a href="#"><i class="fa fa-fw fa-circle-info"></i> Indices</a>
+  <%= link_to bombe_path do %>
+    <i class="fa fa-fw fa-bomb"></i> Bombe
+  <% end %>
 </div>

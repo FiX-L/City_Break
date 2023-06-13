@@ -1,0 +1,77 @@
+.content_bombe{
+  background-color: black;
+  height: 926px;
+  // width: 390px;
+
+  background-image: url(https://imagizer.imageshack.com/img923/2696/ISfX0D.jpg);
+  background-repeat: no-repeat;
+
+
+
+}
+
+
+.bombe_infos h2{
+  // color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 275px;
+  color: white;
+
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.code-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  flex-direction: column;
+
+}
+
+.code-input input {
+  width: 210px;
+  height: 60px;
+  font-size: 24px;
+  text-align: center;
+  margin-right: 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+
+
+#disable-something {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+#disable-something.disabled {
+  opacity: 0.5;
+}
+
+#disable-something.disabled .code-input input {
+  animation: shake 0.4s ease-in-out 2;
+}

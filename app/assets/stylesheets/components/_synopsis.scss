@@ -1,11 +1,14 @@
 
 .synopsis-font{
-
-  background-image: url(http://imagizer.imageshack.com/v2/976x549q70/r/922/ZwOQcn.png);
-  background-attachment: fixed;
-  object-fit: cover;
-  overflow-y: scroll;
+  position: relative;
+  background-image: url(https://imagizer.imageshack.com/img922/4516/YDwAGh.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow-y: auto;
   margin-bottom: 50px;
+  // margin-bottom: 0;
+  // ☝🏻 choisir entre 50px ou Opx en fonction de l'affichage souhaité
 }
 
 .Alerte-synop{
@@ -37,12 +40,12 @@
   justify-content: center;
   align-items: center;
   margin: 30px;
-  margin-top: 30px;
+  margin-top: 10px;
 
 }
 
 .btn-cickable{
   display: flex;
   justify-content: center;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
 }

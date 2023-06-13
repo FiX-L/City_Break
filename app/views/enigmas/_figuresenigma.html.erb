@@ -1,0 +1,21 @@
+<div class="card_enigme">
+      <br>
+      <br>
+      <br>
+      <br>
+
+  <h1><%= @enigma.title %></h1>
+  <p><%= @enigma.description %></p>
+
+ <% if @enigma.point_of_interest %>
+      <%= link_to "next", point_of_interest_path(@enigma.point_of_interest) %>
+
+    <% else %>
+      <%= link_to "next", enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1)) %>
+      <% end %>
+      <br>
+      <br>
+      <br>
+      <br>
+
+</div>

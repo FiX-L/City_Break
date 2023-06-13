@@ -1,10 +1,17 @@
 // Specific CSS for your home-page
 
   .content_home{
+
+
+
+    position: relative;
     background-color: black;
-    height: 926px;
-    // width: 390px;
-    width: 100%;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow-y: auto;
+    margin-bottom: 40px;
+
   }
 
   .toplane img{

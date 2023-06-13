@@ -1,50 +1,33 @@
-
 <div class="content_cards">
-<br>
-  <div class= "card_enigme">
-    <h1><%= @enigma.title %></h1>
-    <p><%= @enigma.description %></p>
+  <div class="card_enigme-container">
+    <% case @enigma.enigma_type %>
+      <% when "figuresenigma" %>
+        <%= render 'figuresenigma' %>
+      <% when "photos_QCM" %>
+        <%= render 'photos_QCM' %>
+      <% when "minigame" %>
+        <%= render 'minigame' %>
+    <% end %>
   </div>
-
-<div class="card_jeu_photo">
-  <div class ="infos">
-    <h3>Validez votre choix ! </h3>
-  </div>
-  <% @enigma.answers.each do |answer| %>
-    <% if answer.is_good_answer %>
-      <% if  @enigma.point_of_interest.exists? %>
-        <%= link_to point_of_interest_path(@enigma.point_of_interest) do %>
-          <div class ="photos" style="background-image: url('<%= answer.poster_url %>');">
-            <%= answer.content %>
-          </div>
-        <% end %>
-        <% else %>
-          <%= link_to enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1)) do %>
-          <div class ="photos" style="background-image: url('<%= answer.poster_url %>');">
-            <%= answer.content %>
-          </div>
-          <% end %>
-        <% end %>
-      <% else %>
-
-        <%= link_to game_path(@enigma.game) do %>
-          <div class ="photos" style="background-image: url('<%= answer.poster_url %>');">
-            <%= answer.content %>
-          </div>
-        <% end %>
-      <% end %>
-     <% end %>
-
-    </div>
-
-
-
 </div>
-<div class="navbar_game">
 
+
+<div class="navbar_game">
   <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
   <a href="#"><i class="fa fa-fw fa-user"></i> Profil</a>
-  <a href="#"><i class="fa fa-fw fa-circle-info"></i> Indices</a>
+  <%# <a href="#"><i class="fa fa-fw fa-circle-info" ></i> Indices</a> %>
+  <button class="button-indice" onclick="window.dialog.showModal();"><i class="fa fa-fw fa-user"></i>Indice</button>
+  <dialog id="dialog">
+    <div class="popup-text">
+      <h2>Indice de l'egnime</h2>
+        <%# <p>A CSS-only modal based on the <a href="https://developer.mozilla.org/es/docs/Web/CSS/::backdrop" target="_blank">::backdrop</a> pseudo-class. Hope you find it helpful.</p> %>
+          <% if @enigma.hint.nil? %>
+            <p> Aucun indice pour cette enigme </p>
+          <% else %>
+            <p><%=@enigma.hint.content %></p>
+          <% end %>
+    </div>
+      <button onclick="window.dialog.close();" aria-label="close" class="x">❌</button>
+  </dialog>
   <a href="#"><i class="fa fa-fw fa-bomb"></i> Bombe</a>
-
 </div>

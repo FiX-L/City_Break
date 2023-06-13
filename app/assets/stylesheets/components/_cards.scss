@@ -1,60 +1,59 @@
-.content_cards{
+.content_cards {
+  position: relative;
   background-image: url(https://imagizer.imageshack.com/img924/5665/QGG1XO.jpg);
-  background-attachment: fixed;
-  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   overflow-y: auto;
-  margin-bottom: 50px;
+  margin-bottom: 0;
+
 }
 
 
+// .card_enigme-container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100%;
+// }
 
-.card_enigme{
+.card_enigme {
   background-color: rgba(223, 216, 202, 0.8);
-  width: 280px;
-  height: 370px;
+
+  // min-height: 100%;
   border-radius: 30px;
   text-align: center;
   padding-top: 10px;
   color: #105652;
-  margin:auto;
   margin-top: 110px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
-
-
-
-
 .card_enigme h1{
-  font-size: 45px;
+  font-size: 40px;
   font-weight: bold;
+  margin-top: 20px;
 
 }
 
 .card_enigme p{
-  font-size: 20px;
+  font-size: 25px;
   margin-left: 10px;
-  margin-top: 30px;
+  margin-top: 60px;
   margin-right: 10px;
 }
-//   overflow: hidden;
-//   border-right: .15em solid #105652;
-//   white-space: nowrap;
-//   animation:
-//   typing 1s steps(80, end) forwards;
-//   font-size: 1.6rem;
-//   width: 0;
-// }
-// @keyframes typing {
-//   from { width: 0 }
-//   to { width: 100% }
-// }
 
+
+.infos{
+  margin-top: 60px;
+}
 
 
 .card_jeu_photo{
   background-color: rgba(223, 216, 202, 0.8);
   margin-top: 50px;
-  width: 280px;
+  width: 320px;
   height: 300px;
   border-radius: 30px;
   text-align: center;

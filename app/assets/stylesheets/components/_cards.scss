@@ -6,42 +6,48 @@
   height: 100vh;
   overflow-y: auto;
   margin-bottom: 0;
-  width: 450px;
+
 }
 
-.card_enigme-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
+
+// .card_enigme-container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100%;
+// }
 
 .card_enigme {
   background-color: rgba(223, 216, 202, 0.8);
-  width: 320px;
-  min-height: 100%;
+
+  // min-height: 100%;
   border-radius: 30px;
   text-align: center;
   padding-top: 10px;
   color: #105652;
   margin-top: 110px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .card_enigme h1{
-  font-size: 45px;
+  font-size: 40px;
   font-weight: bold;
+  margin-top: 20px;
 
 }
 
 .card_enigme p{
-  font-size: 30px;
+  font-size: 25px;
   margin-left: 10px;
-  margin-top: 30px;
+  margin-top: 60px;
   margin-right: 10px;
 }
 
 
-
+.infos{
+  margin-top: 60px;
+}
 
 
 .card_jeu_photo{

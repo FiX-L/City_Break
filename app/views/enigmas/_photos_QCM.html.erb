@@ -23,9 +23,9 @@
             </div>
             <% end %>
         <% end %>
-
+<%#
       <% else %>
-        <%= link_to "False Answer", penalty_path(@user_game, @enigma), class: "false-answer-button", remote: true, data:{turbo_method: "patch"} %>
+        <%# <%= link_to "False Answer", penalty_path(@user_game, @enigma), class: "false-answer-button", remote: true, data:{turbo_method: "patch"} %>
 
       <% end %>
     </div>
@@ -33,7 +33,3 @@
 
 </div>
   <%# <%= link_to enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1))  %>
-
-
-
-

@@ -19,11 +19,8 @@
               <%= answer.content %>
             </div>
           <% end %>
-        <% else %>
-          <%= link_to enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1)) do %>
-            <div class="photos" style="background-image: url('<%= answer.poster_url %>');">
-              <%= answer.content %>
-            </div>
+          <% else %>
+            <%= link_to "False Answer", false_answer_popup_enigma_path(@enigma), class: "false-answer-button", remote: true %>
           <% end %>
         <% end %>
       <% else %>
@@ -59,6 +56,22 @@
 <div class="navbar_game">
     <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
     <a href="#"><i class="fa fa-fw fa-user"></i> Profil</a>
-    <a href="#"><i class="fa fa-fw fa-circle-info"></i> Indices</a>
+    <%# <a href="#"><i class="fa fa-fw fa-circle-info" ></i> Indices</a> %>
+    <button class="button-indice" onclick="window.dialog.showModal();"><i class="fa fa-fw fa-user"></i>Indice</button>
+      <dialog id="dialog">
+            <div class="popup-text">
+              <h2>Indice de l'egnime</h2>
+              <%# <p>A CSS-only modal based on the <a href="https://developer.mozilla.org/es/docs/Web/CSS/::backdrop" target="_blank">::backdrop</a> pseudo-class. Hope you find it helpful.</p> %>
+            <% if @enigma.hint.nil? %>
+              <p> Aucun indice pour cette enigme </p>
+            <% else %>
+              <p><%=@enigma.hint.content %></p>
+            <% end %>
+          </div>
+        <button onclick="window.dialog.close();" aria-label="close" class="x">❌</button>
+      </dialog>
     <a href="#"><i class="fa fa-fw fa-bomb"></i> Bombe</a>
   </div>
+
+ <%# <button class="primary" onclick="window.dialog.showModal();">Indice</button> %>
+

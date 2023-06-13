@@ -5,6 +5,7 @@ class PointOfInterestsController < ApplicationController
   end
 
   def show
+    @user_game = UserGame.where(user: current_user).last
   end
 
 

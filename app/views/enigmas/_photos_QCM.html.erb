@@ -22,7 +22,7 @@
           <% end %>
         <% end %>
       <% else %>
-        <%= link_to "False Answer", false_answer_popup_enigma_path(@enigma), class: "false-answer-button", remote: true %>
+        <%= link_to "False Answer", penalty_path(@user_game, @enigma), class: "false-answer-button", remote: true, data:{turbo_method: "patch"} %>
       <% end %>
     <% end %>
   </dialog>

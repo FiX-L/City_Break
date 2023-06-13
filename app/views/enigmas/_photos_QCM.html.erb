@@ -1,5 +1,6 @@
 <div class="card_enigme">
   <h1><%= @enigma.title %></h1>
+  __________________________
   <p><%= @enigma.description %></p>
 
   <%# <div class="card_jeu_photo"> %>
@@ -24,8 +25,8 @@
             <% end %>
         <% end %>
 
-      <% else %>
-        <%= link_to "False Answer", penalty_path(@user_game, @enigma), class: "false-answer-button", remote: true, data:{turbo_method: "patch"} %>
+      <%# <% else %>
+        <%# <%= link_to "False Answer", penalty_path(@user_game, @enigma), class: "false-answer-button", remote: true, data:{turbo_method: "patch"} %>
 
       <% end %>
     </div>
@@ -33,7 +34,3 @@
 
 </div>
   <%# <%= link_to enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1))  %>
-
-
-
-

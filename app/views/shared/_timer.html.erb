@@ -1,10 +1,13 @@
   <%# TIMER %>
 <div class="timer-color-text">
   <% seconds_until_target_time = @user_game.end_of_game_time.to_i - (60 * @user_game.penalty) - Time.now.to_i%>
-  <%= content_tag(:h1, "",class: "toto", data: {
-    controller: "countdown",
-    countdown_target: "countdown",
-    seconds_until_end_value: seconds_until_target_time
-  }) %>
+
+
+    <%= content_tag(:h4, "dzada",class: "toto", data: {
+      controller: "countdown",
+      countdown_target: "countdown",
+      seconds_until_end_value: seconds_until_target_time
+    }) %>
 </div>
+
   <%# TIMER %>

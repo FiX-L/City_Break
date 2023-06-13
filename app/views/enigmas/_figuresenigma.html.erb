@@ -1,8 +1,8 @@
 <div class="card_enigme">
+      <%# <br>
       <br>
       <br>
-      <br>
-      <br>
+      <br> %>
 
   <h1><%= @enigma.title %></h1>
   <p><%= @enigma.description %></p>
@@ -14,9 +14,9 @@
     <% else %>
       <%= link_to "next", enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1)) %>
       <% end %>
+      <%# <br>
       <br>
       <br>
-      <br>
-      <br>
+      <br> %>
 
 </div>

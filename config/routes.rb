@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   get '/bombe', to: "pages#bombe"
   get '/hint', to: "pages#hint"
 
+  patch '/user_games/:user_game_id/enigma/:enigma_id', to: "user_games#penalty", as: "penalty"
+
+
   resources :games do
     # resources :user_games, only: [:create]
     # resources :enigmas, only: [:show]
@@ -27,6 +30,8 @@ Rails.application.routes.draw do
       get '/enigmas/bomb', to: 'enigmas#bomb', as: 'bomb'
 
   end
+
+
 
 
 resources :point_of_interests, only:[:show]

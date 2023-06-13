@@ -3,27 +3,37 @@
   <p><%= @enigma.description %></p>
 
   <%# <div class="card_jeu_photo"> %>
-    <div class="infos">
-      <h3>Validez votre choix ! </h3>
-    </div>
-    <% @enigma.answers.each do |answer| %>
-      <% if answer.is_good_answer %>
-        <% if @enigma.point_of_interest %>
-          <%= link_to point_of_interest_path(@enigma.point_of_interest) do %>
-            <div class="photos" style="background-image: url('<%= answer.poster_url %>');">
-              <%= answer.content %>
-            </div>
+
+  <div class="infos">
+    <%# <h3>Validez votre choix !</h3> %>
+    <div class="photo_answer">
+      <% @enigma.answers.shuffle.each do |answer| %>
+        <% if answer.is_good_answer %>
+          <% if @enigma.point_of_interest %>
+            <%= link_to point_of_interest_path(@enigma.point_of_interest), class: "answer-link" do %>
+              <div class="photos" style="background-image: url('<%= answer.poster_url %>');">
+                <%# <%= answer.content %>
+              </div>
+            <% end %>
           <% end %>
         <% else %>
-          <%= link_to enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1)) do %>
+          <%= link_to false_answer_popup_enigma_path(@enigma), class: "answer-link" do %>
             <div class="photos" style="background-image: url('<%= answer.poster_url %>');">
-              <%= answer.content %>
+              <%# <%= answer.content %>
             </div>
-          <% end %>
+            <% end %>
         <% end %>
+
       <% else %>
-        <%= link_to "False Answer", false_answer_popup_enigma_path(@enigma), class: "false-answer-button", remote: true %>
+        <%= link_to "False Answer", penalty_path(@user_game, @enigma), class: "false-answer-button", remote: true, data:{turbo_method: "patch"} %>
+
       <% end %>
-    <% end %>
-  </dialog>
+    </div>
   </div>
+
+</div>
+  <%# <%= link_to enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1))  %>
+
+
+
+

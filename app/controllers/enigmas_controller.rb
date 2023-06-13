@@ -7,7 +7,9 @@ class EnigmasController < ApplicationController
 
   def show
     @answers = @enigma.answers
+    @last_enigma = Enigma.last
     @user_game = UserGame.where(user: current_user).last
+
   end
 
   def new

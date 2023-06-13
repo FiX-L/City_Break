@@ -27,6 +27,8 @@ Rails.application.routes.draw do
   resources :enigmas do
     get 'false_answer_popup', on: :member
       get 'hint_popup', on: :member
+      get '/enigmas/bomb', to: 'enigmas#bomb', as: 'bomb'
+
   end
 
 

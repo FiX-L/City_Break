@@ -7,6 +7,7 @@
   <h1><%= @enigma.title %></h1>
   <p><%= @enigma.description %></p>
 
+
  <% if @enigma.point_of_interest %>
       <%= link_to "next", point_of_interest_path(@enigma.point_of_interest) %>
 

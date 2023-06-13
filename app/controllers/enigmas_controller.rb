@@ -7,6 +7,7 @@ class EnigmasController < ApplicationController
 
   def show
     @answers = @enigma.answers
+    @last_enigma = Enigma.last
   end
 
   def new

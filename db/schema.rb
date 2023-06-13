@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_12_122328) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_13_085240) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -40,6 +40,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_12_122328) do
     t.bigint "game_id"
     t.bigint "point_of_interest_id"
     t.integer "order_in_the_game"
+    t.string "enigma_type"
     t.index ["game_id"], name: "index_enigmas_on_game_id"
     t.index ["point_of_interest_id"], name: "index_enigmas_on_point_of_interest_id"
   end

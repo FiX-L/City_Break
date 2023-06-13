@@ -11,9 +11,10 @@ dialog {
   background-attachment: fixed;
   background-position: center;
   background-size: auto 100%;
-	padding: 1rem 3rem;
+	// padding: 1rem 3rem; ne pas réactiver sinon le cadrage est trop étroit sur un petit ecran
   opacity: 0.8;
 	max-width: 350px;
+  max-height: 420px;
 	padding-top: 2rem;
 	border-radius: 20px;
 	border: 0;
@@ -25,12 +26,13 @@ dialog {
 		backdrop-filter: blur(20px);
 	}
 	.x {
-		filter: grayscale(1);
+    filter: drop-shadow(16px 16px 20px red) invert(75%); // j'ai mis ce filtre pour jouer sur les contrastes
+		// filter: grayscale(1);
 		border: none;
 		background: none;
-		position: absolute;
-		top: 15px;
-		right: 10px;
+		// position: absolute; permet d'avoir le bouton au centre de la div
+		// top: 15px; celui et celui d'en dessous permettent de mettre la position en au à droite
+		// right: 10px;
 		transition: ease filter, transform 0.3s;
 		cursor: pointer;
 		transform-origin: center;
@@ -44,6 +46,7 @@ dialog {
 		font-size: 2rem;
 		padding-bottom: 1rem;
     color: #DFD8CA;
+    margin-top: 32px;
 
 	}
 	p {
@@ -61,14 +64,17 @@ dialog {
 }
 
 /*General Styles*/
-body {
-	// height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-family: Poppins, sans-serif;
-	background-size: cover;
-}
+
+// body {
+// 	height: 100vh;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	font-family: Poppins, sans-serif;
+// 	background-size: cover;
+// }
+// ☝🏻 à supprimer
+
 button.primary {
 	display: inline-block;
 	font-size: 0.8rem;
@@ -93,10 +99,9 @@ button.primary {
   color: #DFD8CA;
   border-radius: 17px;
   text-align: center;
-  padding: 30px;
+  padding: 16px;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
 
 }
 

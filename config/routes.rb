@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   get '/bombe', to: "pages#bombe"
   get '/hint', to: "pages#hint"
 
+  patch '/user_games/:user_game_id/enigma/:enigma_id', to: "user_games#penalty", as: "penalty"
+
+
   resources :games do
     # resources :user_games, only: [:create]
     # resources :enigmas, only: [:show]
@@ -25,6 +28,8 @@ Rails.application.routes.draw do
     get 'false_answer_popup', on: :member
       get 'hint_popup', on: :member
   end
+
+
 
 
 resources :point_of_interests, only:[:show]

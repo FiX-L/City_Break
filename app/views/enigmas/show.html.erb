@@ -1,4 +1,6 @@
 <div class="content_cards">
+  <%= render "shared/timer"  %>
+
   <div class="card_enigme-container">
     <% case @enigma.enigma_type %>
       <% when "figuresenigma" %>
@@ -26,8 +28,8 @@
           <% else %>
             <p><%=@enigma.hint.content %></p>
           <% end %>
-    </div>
       <button onclick="window.dialog.close();" aria-label="close" class="x">❌</button>
+    </div>
   </dialog>
   <a href="#"><i class="fa fa-fw fa-bomb"></i> Bombe</a>
 </div>

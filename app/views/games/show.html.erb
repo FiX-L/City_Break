@@ -1,3 +1,6 @@
+
+
+
 <div class="big-content">
   <div class="principal-synop">
     <div class="synopsis-font">
@@ -8,7 +11,9 @@
           <p><%= @game.synopsis %></p>
         </div>
         <div class="btn-cickable">
-        <a class = "btn_green_jouer", <%= link_to "Jouer", enigma_path(@game.enigmas.first.id), data: { turbo_confirm: "Are you sure?"} %>></a>
+          <%= link_to "Jouer", game_user_games_path(@game) ,class: "btn_green_jouer",
+            data: { turbo_confirm: "Are you sure?", turbo_method: "POST"}
+          %>
         </div>
     </div>
   </div>

@@ -2,6 +2,7 @@
 
  <div class="card_enigme-container">
 
+
 <div class="card_enigme">
   <h1><%= @enigma.title %></h1>
   <p><%= @enigma.description %></p>
@@ -40,16 +41,24 @@
     <% else %>
       <p> <%=@enigma.hint.content  %> </p>
       <% end %>
+
+    <% case @enigma.enigma_type %>
+      <% when "figuresenigma" %>
+        <%= render 'figuresenigma' %>
+      <% when "photos_QCM" %>
+        <%= render 'photos_QCM' %>
+      <% when "minigame" %>
+        <%= render 'minigame' %>
+    <% end %>
+
+
     </div>
-    <button onclick="window.dialog.close();" aria-label="close" class="x">:x:</button>
-  </dialog>
-  </div>
+<%# <%= console %>
+</div>
+
 <div class="navbar_game">
     <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
     <a href="#"><i class="fa fa-fw fa-user"></i> Profil</a>
     <a href="#"><i class="fa fa-fw fa-circle-info"></i> Indices</a>
     <a href="#"><i class="fa fa-fw fa-bomb"></i> Bombe</a>
   </div>
-</div>
-<%# <%= console %>
-</div>

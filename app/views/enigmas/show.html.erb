@@ -9,7 +9,7 @@
   <%# <div class="card_jeu_photo"> %>
     <div class="infos">
       <h3>Validez votre choix ! </h3>
-    </div>
+
     <% @enigma.answers.each do |answer| %>
       <% if answer.is_good_answer %>
         <% if @enigma.point_of_interest %>
@@ -29,6 +29,7 @@
         <%= link_to "False Answer", false_answer_popup_enigma_path(@enigma), class: "false-answer-button", remote: true %>
       <% end %>
     <% end %>
+     </div>
     <button class="primary" onclick="window.dialog.showModal();">Indice</button>
   <dialog id="dialog">
       <div class="popup-text">

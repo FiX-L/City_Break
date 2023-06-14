@@ -10,10 +10,10 @@
 
 
  <% if @enigma.point_of_interest %>
-      <%= link_to "Continuer", point_of_interest_path(@enigma.point_of_interest) %>
+      <%= link_to "Continuer", point_of_interest_path(@enigma.point_of_interest), class:"continuez" %>
 
     <% else %>
-      <%= link_to "Continuer", enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1))%>
+      <%= link_to "Continuer", enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1)), class:"continuez" %>
       <% end %>
       <%# <br>
       <br>

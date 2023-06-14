@@ -17,10 +17,13 @@ _________________________
 <h2>Prochaine étape</h2>
 
 <p><%= @point_of_interest.indication_next_step %></p>
+<%= link_to "Continuer",enigma_path(Enigma.find_by_order_in_the_game(@point_of_interest.enigma.order_in_the_game + 1)), class:"continuez" %>
 
 </div>
 
-<%= link_to "Continuer" ,enigma_path(Enigma.find_by_order_in_the_game(@point_of_interest.enigma.order_in_the_game + 1)) %>
+
+
+
 </div>
 
 

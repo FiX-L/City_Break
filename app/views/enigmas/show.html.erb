@@ -1,13 +1,16 @@
 <div class="card_enigme-container">
   <div class="content_cards" data-controller="penalty">
+
     <%= render "shared/timer"  %>
       <% case @enigma.enigma_type %>
+
         <% when "figuresenigma" %>
           <%= render 'figuresenigma' %>
         <% when "photos_QCM" %>
           <%= render 'photos_QCM' %>
         <% when "minigame" %>
           <%= render 'minigame' %>
+
         <% when "bombe" %>
           <%= render 'bombe' %>
         <% when "resolution_game" %>
@@ -16,7 +19,9 @@
     </div>
     <div class="navbar_inside">
       <div class="home">
+      <%= link_to home_path do %>
         <a class="home" href="#"><i class="fa fa-fw fa-home"></i></a>
+         <% end %>
         </div>
         <%# <a href="#"><i class="fa fa-fw fa-user"></i> Profil</a> %>
         <%# <a href="#"><i class="fa fa-fw fa-circle-info" ></i> Indices</a> %>
@@ -36,6 +41,11 @@
           </div>
         </dialog>
       <div class="bombe">
-      <a href="#"><i class="fa fa-fw fa-bomb"></i></a>
+      <%= link_to bombe_path do %>
+     <i class="fa fa-fw fa-bomb"></i>
+      <% end %>
       </div>
     </div>
+
+</div>
+

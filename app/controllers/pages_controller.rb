@@ -23,4 +23,5 @@ class PagesController < ApplicationController
   #     redirect_to ending_adventure_show_path
   #   end
   # end
+
 end

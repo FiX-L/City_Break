@@ -18,15 +18,26 @@
       <h2>Apoca<font color="#CE0707"> LILLE</font>pse</h2>
     </div>
   </div>
+
+
+
+
   <div class="navbar_home">
-    <%= link_to profil_path do %>
-      <i class="fa fa-fw fa-user"></i> Profil
-    <% end %>
+
+    <div class="regles">
     <%= link_to rules_path do %>
-      <i class="fa fa-fw fa-list"></i> Règles
+      <i class="fa fa-fw fa-list"></i>
     <% end %>
+    </div>
+    <div class="profil">
+    <%= link_to profil_path do %>
+      <i class="fa fa-fw fa-user"></i>
+    <% end %>
+    </div>
+    <div class="reglages">
     <%= link_to reglages_path do %>
-      <i class="fa fa-fw fa-list"></i> Réglages
+      <i class="fa fa-fw fa-gear"></i>
     <% end %>
+    </div>
   </div>
 </div>

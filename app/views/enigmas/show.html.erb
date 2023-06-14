@@ -4,12 +4,14 @@
 
 
     <% case @enigma.enigma_type %>
-      <% when "figuresenigma" %>
-        <%= render 'figuresenigma' %>
-      <% when "photos_QCM" %>
-        <%= render 'photos_QCM' %>
-      <% when "minigame" %>
-        <%= render 'minigame' %>
+    <% when "figuresenigma" %>
+      <%= render 'figuresenigma' %>
+    <% when "photos_QCM" %>
+      <%= render 'photos_QCM' %>
+    <% when "minigame" %>
+      <%= render 'minigame' %>
+    <% when "resolution_game" %>
+      <%= render 'resolution_game' %>
     <% end %>
   </div>
 
@@ -20,6 +22,7 @@
   <a class="home" href="#"><i class="fa fa-fw fa-home"></i></a>
   </div>
   <%# <a href="#"><i class="fa fa-fw fa-user"></i> Profil</a> %>
+
   <%# <a href="#"><i class="fa fa-fw fa-circle-info" ></i> Indices</a> %>
   <div class="indices" >
   <a onclick="window.dialog.showModal();"><i class="fa fa-fw fa-circle-info"></i></a>

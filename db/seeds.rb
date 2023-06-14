@@ -70,6 +70,7 @@ answer3 = Answer.create(enigma_id: enigma1.id, is_good_answer: false, content: "
 answer4 = Answer.create(enigma_id: enigma1.id, is_good_answer: false, content: "falseanswer", poster_url: "https://imagizer.imageshack.com/img923/1636/7j3Jnx.jpg")
 
 
+
 #ETAPE 5 : VIEUX DE LA VIEILLE
 poi5 = PointOfInterest.create!(titre: "Les spécialités culinaires", anecdote: "Les Hauts-de-France sont réputés pour deux spécialités culinaires incontournables : le Welsh et la carbonnade flamande. Le Welsh est un plat à base de pain grillé, de jambon, de bière et de cheddar fondu. La carbonnade flamande est un ragoût de bœuf mijoté dans une sauce riche à la bière brune. Les deux plats sont traditionnellement servis avec de savoureuses frites croustillantes, créant ainsi une combinaison parfaite entre les saveurs riches et la texture des frites.", indication_next_step: "Marche vers l'ancien cœur battant de Lille, la Treille.", poster_url: "https://imagizer.imageshack.com/img924/4408/1iIIxn.jpg")
 enigma6 = Enigma.create!(enigma_type: "photos_QCM", title: "Le secret du Welsh", description: "Au Vieux de la Vieille, les papilles s'éveillent. Le Welsh y est roi, mais sauras-tu le comprendre avec moi ? Entre pain, moutarde, œufs et jambon, la bière et les frites jouent le bon ton. Mais le roi cheddar reste à deviner, Galloway, Montgomery, Keen's ou Westcombe, lequel dois-tu privilégier ?", game_id: game1.id, point_of_interest_id: poi5.id, order_in_the_game: 6)

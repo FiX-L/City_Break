@@ -11,7 +11,7 @@ export default class extends Controller {
   }
 
   send(event) {
-    alert("t'es nul");
+
     console.log(event.currentTarget.href);
     event.preventDefault();
 

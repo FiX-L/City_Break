@@ -1,17 +1,20 @@
-<div class="content_cards">
+<<div class="content_cards">
   <%= render "shared/timer"  %>
 
   <div class="card_enigme-container">
     <% case @enigma.enigma_type %>
-      <% when "figuresenigma" %>
-        <%= render 'figuresenigma' %>
-      <% when "photos_QCM" %>
-        <%= render 'photos_QCM' %>
-      <% when "minigame" %>
-        <%= render 'minigame' %>
+    <% when "figuresenigma" %>
+      <%= render 'figuresenigma' %>
+    <% when "photos_QCM" %>
+      <%= render 'photos_QCM' %>
+    <% when "minigame" %>
+      <%= render 'minigame' %>
+    <% when "resolution_game" %>
+      <%= render 'resolution_game' %>
     <% end %>
   </div>
 </div>
+
 
 
 <div class="navbar_game">

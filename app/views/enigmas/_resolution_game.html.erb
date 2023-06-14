@@ -4,6 +4,6 @@
   __________________________
   <p><%= @enigma.description %></p>
 
-  <%= link_to "DESACTIVER LA BOMBE", bombe_path %>
+  <%= link_to "DESACTIVER LA BOMBE", enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1)) %>
 
 </div>

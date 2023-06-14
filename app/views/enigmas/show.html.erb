@@ -1,7 +1,8 @@
+<div class="card_enigme-container">
 <div class="content_cards">
   <%= render "shared/timer"  %>
 
-  <div class="card_enigme-container">
+
     <% case @enigma.enigma_type %>
       <% when "figuresenigma" %>
         <%= render 'figuresenigma' %>
@@ -11,14 +12,18 @@
         <%= render 'minigame' %>
     <% end %>
   </div>
-</div>
 
 
-<div class="navbar_game">
-  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
-  <a href="#"><i class="fa fa-fw fa-user"></i> Profil</a>
+
+<div class="navbar_inside">
+<div class="home">
+  <a class="home" href="#"><i class="fa fa-fw fa-home"></i></a>
+  </div>
+  <%# <a href="#"><i class="fa fa-fw fa-user"></i> Profil</a> %>
   <%# <a href="#"><i class="fa fa-fw fa-circle-info" ></i> Indices</a> %>
-  <button class="button-indice" onclick="window.dialog.showModal();"><i class="fa fa-fw fa-user"></i>Indice</button>
+  <div class="indices" >
+  <a onclick="window.dialog.showModal();"><i class="fa fa-fw fa-circle-info"></i></a>
+  </div>
   <dialog id="dialog">
     <div class="popup-text">
       <h2>Indice de l'egnime</h2>
@@ -32,5 +37,8 @@
     </div>
   </dialog>
 
-  <a href="#"><i class="fa fa-fw fa-bomb"></i> Bombe</a>
+<div class="bombe">
+  <a href="#"><i class="fa fa-fw fa-bomb"></i></a>
+  </div>
+</div>
 </div>

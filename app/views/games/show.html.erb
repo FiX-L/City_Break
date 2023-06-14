@@ -1,6 +1,4 @@
 
-
-
 <div class="big-content">
   <div class="principal-synop">
     <div class="synopsis-font">
@@ -10,23 +8,18 @@
         <div class="synopsis">
           <p><%= @game.synopsis %></p>
         </div>
-        <div class="btn-cickable">
-          <%= link_to "Jouer", game_user_games_path(@game) ,class: "btn_green_jouer",
-            data: { turbo_confirm: "Are you sure?", turbo_method: "POST"}
-          %>
-        </div>
+
     </div>
   </div>
 </div>
+
+
+
+
 <div class="navbar_game">
-  <%= link_to home_path do %>
-    <i class="fa fa-fw fa-home"></i>Home
+<div class="play">
+  <%= link_to game_user_games_path(@game),data: { turbo_confirm: "Are you sure?", turbo_method: "POST"} do %>
+    <i class="fa fa-fw fa-play"></i>
   <% end %>
-<%= link_to profil_path do %>
-    <i class="fa fa-fw fa-user"></i> Profil
-  <% end %>
-  <a href="#"><i class="fa fa-fw fa-circle-info"></i> Indices</a>
-  <%= link_to bombe_path do %>
-    <i class="fa fa-fw fa-bomb"></i> Bombe
-  <% end %>
+</div>
 </div>

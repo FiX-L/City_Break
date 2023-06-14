@@ -1,31 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Gloria+Hallelujah&family=Inter+Tight:wght@100&family=Sarala&display=swap');
 
-.content_cards {
-  position: relative;
-  background-image: url(https://imagizer.imageshack.com/img924/5665/QGG1XO.jpg);
+
+.card_enigme-container{
+  background-color: black;
   background-size: cover;
   background-position: center;
-  height: 100vh;
   overflow-y: auto;
-  margin-bottom: 0;
-
 }
 
+.content_cards {
 
-// .card_enigme-container {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   height: 100%;
-// }
+  position: relative;
+  background-image: url(https://imagizer.imageshack.com/img924/5665/QGG1XO.jpg);
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  overflow-y: auto;
+  margin-bottom: 69px;
+  height: 130vh;
+}
+
 
 .card_enigme {
 
   background-color: rgba(223, 216, 202, 0.8);
   box-shadow: 5px 5px 10px black;
-
-  // min-height: 100%;
   border-radius: 30px;
   text-align: center;
   padding-top: 10px;
@@ -42,8 +42,15 @@
   margin-left: 20px;
   margin-right: 20px;
   font-family: 'Aclonica', sans-serif;
+}
 
-
+.card_enigme h2{
+  margin-top: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: -28px;
+  margin-bottom: -15px;
 }
 
 .card_enigme p{
@@ -51,8 +58,6 @@
   margin-left: 10px;
   margin-top: 40px;
   margin-right: 10px;
-
-
   color: #121010;
 }
 
@@ -86,12 +91,12 @@
   border-radius: 10px;
 }
 
-
-
-
-
-
-
+.poster img {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px black;
+}
 
 
 .answer-link{

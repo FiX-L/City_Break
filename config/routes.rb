@@ -14,10 +14,9 @@ Rails.application.routes.draw do
   get 'pages/defeat', to: 'pages#defeat', as: 'defeat'
 
 
-
   get '/hint', to: "pages#hint"
-
   get '/user_games/:user_game_id/enigma/:enigma_id', to: "user_games#penalty", as: "penalty"
+
 
 
   resources :games do

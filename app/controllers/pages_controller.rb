@@ -11,17 +11,17 @@ class PagesController < ApplicationController
   def ending_adventure_show
   end
 
-  def bombe
-  end
+  # def bombe
+  #   @user_game = UserGame.where(user: current_user).last
+  # end
 
   def defeat
   end
 
-  def bombe_answer
-    if params["code"] == "3492179918"
-      redirect_to ending_adventure_show_path
-    else
-    #redirect_to penalty_path(@user_game, @enigma)
-    end
-  end
+  # def bombe_answer
+  #   if params["code"] == "3492179918"
+  #     redirect_to ending_adventure_show_path
+  #   end
+  # end
+
 end

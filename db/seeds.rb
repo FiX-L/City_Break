@@ -64,10 +64,10 @@ poi4 = PointOfInterest.create!(titre: "Le lion des Flandres", anecdote: "le Lion
 enigma5 = Enigma.create!(enigma_type: "photos_QCM", title: "Hospice comtesse", description: "Face au chevet de la chapelle, 3 blasons s'offrent en querelle. Entre le lion et les drapeaux, ton cœur est en étau. Mais souviens-toi, en Flandres tu te trouves, alors choisis et trouve.", game_id: game1.id, point_of_interest_id: poi4.id, order_in_the_game: 5)
 hint2 = Hint.create!(content: "Le roi de la savane peut être le roi des villes.", enigma_id: enigma5.id)
 
-answer1 = Answer.create(enigma_id: enigma1.id, is_good_answer: true, content: "goodanswer", poster_url: "https://imagizer.imageshack.com/img923/8537/KZy3js.jpg")
-answer2 = Answer.create(enigma_id: enigma1.id, is_good_answer: false, content: "falseanswer", poster_url: "https://imagizer.imageshack.com/img924/2554/mSMWUL.jpg")
-answer3 = Answer.create(enigma_id: enigma1.id, is_good_answer: false, content: "falseanswer", poster_url: "https://imagizer.imageshack.com/img924/3861/24pLHz.jpg")
-answer4 = Answer.create(enigma_id: enigma1.id, is_good_answer: false, content: "falseanswer", poster_url: "https://imagizer.imageshack.com/img923/1636/7j3Jnx.jpg")
+answer1 = Answer.create(enigma_id: enigma5.id, is_good_answer: true, content: "goodanswer", poster_url: "https://imagizer.imageshack.com/img923/6126/9rCgG9.jpg.jpg")
+answer2 = Answer.create(enigma_id: enigma5.id, is_good_answer: false, content: "falseanswer", poster_url: "https://imagizer.imageshack.com/img924/3174/xxrLiC.jpg")
+answer3 = Answer.create(enigma_id: enigma5.id, is_good_answer: false, content: "falseanswer", poster_url: "https://imagizer.imageshack.com/img923/6717/dlwJWQ.jpg")
+answer4 = Answer.create(enigma_id: enigma5.id, is_good_answer: false, content: "falseanswer", poster_url: "https://imagizer.imageshack.com/img924/6107/5TGvHL.jpg")
 
 
 
@@ -76,10 +76,10 @@ poi5 = PointOfInterest.create!(titre: "Les spécialités culinaires", anecdote: 
 enigma6 = Enigma.create!(enigma_type: "photos_QCM", title: "Le secret du Welsh", description: "Au Vieux de la Vieille, les papilles s'éveillent. Le Welsh y est roi, mais sauras-tu le comprendre avec moi ? Entre pain, moutarde, œufs et jambon, la bière et les frites jouent le bon ton. Mais le roi cheddar reste à deviner, Galloway, Montgomery, Keen's ou Westcombe, lequel dois-tu privilégier ?", game_id: game1.id, point_of_interest_id: poi5.id, order_in_the_game: 6)
 #INTEGRER QCM
 
-answer1 = Answer.create(enigma_id: enigma5.id, is_good_answer: true, content: "goodanswer", poster_url: "https://previews.123rf.com/images/searagen/searagen1503/searagen150300015/37958431-une-gargouille-c%C3%A9l%C3%A8bre-de-l-avenue-de-gargouilles-sur-la-fa%C3%A7ade-de-notre-dame-la-cr%C3%A9ature-est-%C3%A0-la.jpg")
-answer2 = Answer.create(enigma_id: enigma5.id, is_good_answer: false, content: "falseanswer", poster_url: "https://previews.123rf.com/images/searagen/searagen1503/searagen150300015/37958431-une-gargouille-c%C3%A9l%C3%A8bre-de-l-avenue-de-gargouilles-sur-la-fa%C3%A7ade-de-notre-dame-la-cr%C3%A9ature-est-%C3%A0-la.jpg")
-answer3 = Answer.create(enigma_id: enigma5.id, is_good_answer: false, content: "falseanswer", poster_url: "https://previews.123rf.com/images/searagen/searagen1503/searagen150300015/37958431-une-gargouille-c%C3%A9l%C3%A8bre-de-l-avenue-de-gargouilles-sur-la-fa%C3%A7ade-de-notre-dame-la-cr%C3%A9ature-est-%C3%A0-la.jpg")
-answer4 = Answer.create(enigma_id: enigma5.id, is_good_answer: false, content: "falseanswer", poster_url: "https://previews.123rf.com/images/searagen/searagen1503/searagen150300015/37958431-une-gargouille-c%C3%A9l%C3%A8bre-de-l-avenue-de-gargouilles-sur-la-fa%C3%A7ade-de-notre-dame-la-cr%C3%A9ature-est-%C3%A0-la.jpg")
+answer1 = Answer.create(enigma_id: enigma6.id, is_good_answer: true, content: "goodanswer", poster_url: "https://imagizer.imageshack.com/img923/3710/rOp6Fv.jpg")
+answer2 = Answer.create(enigma_id: enigma6.id, is_good_answer: false, content: "falseanswer", poster_url: "https://imagizer.imageshack.com/img924/131/0FayAe.jpg")
+answer3 = Answer.create(enigma_id: enigma6.id, is_good_answer: false, content: "falseanswer", poster_url: "https://imagizer.imageshack.com/img922/8672/oXPfuO.jpg")
+answer4 = Answer.create(enigma_id: enigma6.id, is_good_answer: false, content: "falseanswer", poster_url: "https://imagizer.imageshack.com/img923/45/z7Vt2C.jpg")
 
 
 #ETAPE 6 : CATHEDRALE DE LA TREILLE

@@ -18,7 +18,7 @@
             <% end %>
           <% end %>
         <% else %>
-          <%= link_to false_answer_popup_enigma_path(@enigma), class: "answer-link" do %>
+          <%= link_to penalty_path(@user_game, @enigma), class: "false-answer-button", remote: true, data:{action: "click->penalty#send"} do %>
             <div class="photos" style="background-image: url('<%= answer.poster_url %>');">
               <%# <%= answer.content %>
             </div>

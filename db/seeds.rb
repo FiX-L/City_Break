@@ -71,7 +71,6 @@ answer4 = Answer.create(enigma_id: enigma1.id, is_good_answer: false, content: "
 
 
 
-
 #ETAPE 5 : VIEUX DE LA VIEILLE
 poi5 = PointOfInterest.create!(titre: "Les spécialités culinaires", anecdote: "Les Hauts-de-France sont réputés pour deux spécialités culinaires incontournables : le Welsh et la carbonnade flamande. Le Welsh est un plat à base de pain grillé, de jambon, de bière et de cheddar fondu. La carbonnade flamande est un ragoût de bœuf mijoté dans une sauce riche à la bière brune. Les deux plats sont traditionnellement servis avec de savoureuses frites croustillantes, créant ainsi une combinaison parfaite entre les saveurs riches et la texture des frites.", indication_next_step: "Marche vers l'ancien cœur battant de Lille, la Treille.", poster_url: "https://imagizer.imageshack.com/img924/4408/1iIIxn.jpg")
 enigma6 = Enigma.create!(enigma_type: "photos_QCM", title: "Le secret du Welsh", description: "Au Vieux de la Vieille, les papilles s'éveillent. Le Welsh y est roi, mais sauras-tu le comprendre avec moi ? Entre pain, moutarde, œufs et jambon, la bière et les frites jouent le bon ton. Mais le roi cheddar reste à deviner, Galloway, Montgomery, Keen's ou Westcombe, lequel dois-tu privilégier ?", game_id: game1.id, point_of_interest_id: poi5.id, order_in_the_game: 6)
@@ -81,6 +80,7 @@ answer1 = Answer.create(enigma_id: enigma5.id, is_good_answer: true, content: "g
 answer2 = Answer.create(enigma_id: enigma5.id, is_good_answer: false, content: "falseanswer", poster_url: "https://previews.123rf.com/images/searagen/searagen1503/searagen150300015/37958431-une-gargouille-c%C3%A9l%C3%A8bre-de-l-avenue-de-gargouilles-sur-la-fa%C3%A7ade-de-notre-dame-la-cr%C3%A9ature-est-%C3%A0-la.jpg")
 answer3 = Answer.create(enigma_id: enigma5.id, is_good_answer: false, content: "falseanswer", poster_url: "https://previews.123rf.com/images/searagen/searagen1503/searagen150300015/37958431-une-gargouille-c%C3%A9l%C3%A8bre-de-l-avenue-de-gargouilles-sur-la-fa%C3%A7ade-de-notre-dame-la-cr%C3%A9ature-est-%C3%A0-la.jpg")
 answer4 = Answer.create(enigma_id: enigma5.id, is_good_answer: false, content: "falseanswer", poster_url: "https://previews.123rf.com/images/searagen/searagen1503/searagen150300015/37958431-une-gargouille-c%C3%A9l%C3%A8bre-de-l-avenue-de-gargouilles-sur-la-fa%C3%A7ade-de-notre-dame-la-cr%C3%A9ature-est-%C3%A0-la.jpg")
+
 
 #ETAPE 6 : CATHEDRALE DE LA TREILLE
 poi6 = PointOfInterest.create!(titre: "Les Hauts de France, un Melting pot culturel", anecdote: "La vague de migration polonaise dans les Hauts-de-France en 1920 a eu un impact significatif sur la région. Leur présence a renforcé les secteurs clés tels que les mines, la sidérurgie et le textile, contribuant ainsi à la prospérité économique et culturelle de la région. immortalisé par le travail du photographe Kasimir Zgorecki, qui a documenté cet héritage.De l'ancien au nouveau, le cœur de la ville appelle.", indication_next_step: "A l’ombre des 3 grâces et sous le regard du plus illustre des Lillois, l'ultime énigme résidera", poster_url: "https://imagizer.imageshack.com/img922/2778/ddjFRc.jpg")

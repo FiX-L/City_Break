@@ -87,7 +87,7 @@ enigma7 = Enigma.create!(enigma_type: "figuresenigma", title: "Cathedrale de la 
 
 #ETAPE 7 : GRAND PLACE DE LILLE
 poi7 = PointOfInterest.create!(titre: "BRAVO !!!", anecdote: "Tu as triomphé du Pelican, la ville de Lille te remercie….", poster_url: "https://imagizer.imageshack.com/img923/1715/uRZKnj.jpg")
-enigma8 = Enigma.create!(enigma_type: "figuresenigma", title: "Grand Place de Lille", description: "La bombe est cachée sous la fontaine, Pour la désamorcer, regroupes l’ensemble des chiffres que tu as stockée et réponds à cette énigme finale : La fontaine de la déesse est ton dernier arrêt Rappelle-toi du jour où l’appel d’un grand homme a changé notre destinée, valide-le et libère Lille du péché.", game_id: game1.id, point_of_interest_id: poi7.id, order_in_the_game: 8)
+enigma8 = Enigma.create!(enigma_type: "resolution_game", title: "Grand Place de Lille", description: "La bombe est cachée sous la fontaine, Pour la désamorcer, regroupes l’ensemble des chiffres que tu as stockée et réponds à cette énigme finale : La fontaine de la déesse est ton dernier arrêt Rappelle-toi du jour où l’appel d’un grand homme a changé notre destinée, valide-le et libère Lille du péché.", game_id: game1.id, point_of_interest_id: poi7.id, order_in_the_game: 8)
 
 
 

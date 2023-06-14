@@ -7,4 +7,20 @@ class PagesController < ApplicationController
 
   def components
   end
+
+  def ending_adventure_show
+  end
+
+  def bombe
+  end
+
+  def defeat
+  end
+
+  def bombe_answer
+    if params["code"] == "3492179918"
+      redirect_to ending_adventure_show_path
+    end
+
+  end
 end

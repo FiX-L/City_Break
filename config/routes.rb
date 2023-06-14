@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   get '/hint', to: "pages#hint"
 
-  patch '/user_games/:user_game_id/enigma/:enigma_id', to: "user_games#penalty", as: "penalty"
+  get '/user_games/:user_game_id/enigma/:enigma_id', to: "user_games#penalty", as: "penalty"
 
 
   resources :games do

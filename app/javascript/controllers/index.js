@@ -12,3 +12,6 @@ application.register("countdown", CountdownController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import PenaltyController from "./penalty_controller"
+application.register("penalty", PenaltyController)

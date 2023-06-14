@@ -11,7 +11,7 @@ export default class extends Controller {
     const now = new Date().getTime();
     this.endTime = new Date(now + this.secondsUntilEnd * 1000);
 
-    this.countdown = setInterval(this.countdown.bind(this), 250);
+    this.countdown = setInterval(this.countdown.bind(this), 5);
   }
 
   countdown() {
@@ -20,6 +20,7 @@ export default class extends Controller {
 
     if (secondsRemaining <= 0) {
       clearInterval(this.countdown);
+
       window.location = "/pages/defeat";
       this.countdownTarget.innerHTML = "Countdown is over!";
       return;

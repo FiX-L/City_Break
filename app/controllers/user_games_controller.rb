@@ -25,10 +25,15 @@ class UserGamesController < ApplicationController
   end
 
   def penalty
+
     @user_game = UserGame.find(params[:user_game_id])
     @user_game.penalty += 1
     @user_game.save
     @enigma = Enigma.find(params[:enigma_id])
-    redirect_to enigma_path(@enigma)
+
+    respond_to do |format|
+      format.json
+    end
+    # redirect_to enigma_path(@enigma)
   end
 end

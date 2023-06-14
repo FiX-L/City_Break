@@ -20,7 +20,8 @@ class PagesController < ApplicationController
   def bombe_answer
     if params["code"] == "3492179918"
       redirect_to ending_adventure_show_path
+    else
+    #redirect_to penalty_path(@user_game, @enigma)
     end
-
   end
 end

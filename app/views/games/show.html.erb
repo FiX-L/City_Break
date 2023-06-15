@@ -1,4 +1,3 @@
-
 <div class="big-content">
   <div class="principal-synop">
     <div class="synopsis-font">
@@ -12,9 +11,17 @@
   </div>
 </div>
 <div class="navbar_game">
-<div class="play">
-  <%= link_to game_user_games_path(@game) %>
-    <i class="fa fa-fw fa-play"></i>
-  <% end %>
-</div>
+
+  <div class="play" data-controller="start-game">
+
+<a href="">
+  <i class="fa fa-fw fa-play" data-action= "click->start-game#start"></i>
+</a>
+
+
+    <%= link_to game_user_games_path(@game),class: "d-none", data: { turbo_method: "POST", start_game_target: "start"} do %>
+      <i class="fa fa-fw fa-play"></i>
+    <% end %>
+  </div>
+
 </div>

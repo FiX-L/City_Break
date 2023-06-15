@@ -1,25 +1,26 @@
-<div class="card_enigme">
+<div class="card_enigme" data-controller="puzzle">
 
   <h1><%= @enigma.title %></h1>
   __________________________
 
-  <div class="puzzle" data-controller="puzzle">
-    <div class="tile">1</div>
-    <div class="tile">2</div>
-    <div class="tile">3</div>
-    <div class="tile">4</div>
-    <div class="tile">5</div>
-    <div class="tile">6</div>
-    <div class="tile">7</div>
-    <div class="tile">8</div>
+  <div class="puzzle" data-puzzle-target="puzzle">
+    <div class="tile" data-puzzle-target="tile" data-order="1" style='background-image: url(/assets/1.jpg);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="2" style='background-image: url(/assets/2.jpg);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="3" style='background-image: url(/assets/3.jpg);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="4" style='background-image: url(/assets/4.jpg);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="5" style='background-image: url(/assets/5.jpg);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="6" style='background-image: url(/assets/6.jpg);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="7" style='background-image: url(/assets/7.jpg);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="8" style='background-image: url(/assets/8.jpg);'></div>
   </div>
 
   <% if @enigma.point_of_interest %>
-    <%= link_to "next", point_of_interest_path(@enigma.point_of_interest) %>
+    <%= link_to "next", point_of_interest_path(@enigma.point_of_interest), data:{action: "click->puzzle#validate"}%>
 
   <% else %>
     <%= link_to "next", enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1)) %>
   <% end %>
 
+  <%= link_to "penalty", penalty_path(@user_game, @enigma), class: "false-answer-button d-none", remote: true, data:{action: "click->penalty#send", puzzle_target:"penalty"}  %>
 
 </div>

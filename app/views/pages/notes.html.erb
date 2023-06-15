@@ -3,7 +3,18 @@
  <div class="bloc_infos">
   <h1>Bloc-notes</h1>
   <textarea id="note" placeholder="Saisissez votre note ici"></textarea>
-  <button onclick="saveNote()">Enregistrer</button>
+  <div class="content-btn">
+  <button class="enregistrer" onclick="saveNote()">Enregistrer</button>
+  </div>
+  <div class="navbar_home">
+<div class='profil'>
+  <%= link_to :back do %>
+    <i class="fa-solid fa-arrow-left"></i>
+  <% end %>
+  </div>
+</div>
+</div>
+
   </div>
 </div>
 

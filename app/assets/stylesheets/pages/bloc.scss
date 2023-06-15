@@ -1,0 +1,36 @@
+.content_bloc{
+  position: relative;
+  background-image: url("http://imagizer.imageshack.com/v2/976x549q70/r/923/2fVN8E.png");
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow-y: auto;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+
+.bloc_infos p{
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  margin: 30px;
+  padding: 20px;
+
+}
+
+.bloc_infos h1{
+  color:white;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#note{
+  background-color: #080000;
+  color: white;
+  height: 500px;
+  width: 90%;
+  text-align: center;
+  margin-left: 17px;
+}

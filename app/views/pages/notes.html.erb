@@ -1,0 +1,25 @@
+
+ <div class="content_bloc">
+ <div class="bloc_infos">
+  <h1>Bloc-notes</h1>
+  <textarea id="note" placeholder="Saisissez votre note ici"></textarea>
+  <button onclick="saveNote()">Enregistrer</button>
+  </div>
+</div>
+
+<script>
+  // Fonction pour enregistrer la note dans le stockage local
+  function saveNote() {
+    var note = document.getElementById('note').value;
+    localStorage.setItem('userNote', note);
+    alert('La note a été enregistrée avec succès !');
+  }
+
+  // Restaurer la note précédemment enregistrée lors du chargement de la page
+  window.onload = function() {
+    var savedNote = localStorage.getItem('userNote');
+    if (savedNote) {
+      document.getElementById('note').value = savedNote;
+    }
+  };
+</script>

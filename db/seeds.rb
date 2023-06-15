@@ -64,7 +64,7 @@ poi4 = PointOfInterest.create!(titre: "Le lion des Flandres", anecdote: "le Lion
 enigma5 = Enigma.create!(enigma_type: "photos_QCM", title: "Hospice comtesse", description: "Face au chevet de la chapelle, 3 blasons s'offrent en querelle. Entre le lion et les drapeaux, ton cœur est en étau. Mais souviens-toi, en Flandres tu te trouves, alors choisis et trouve.", game_id: game1.id, point_of_interest_id: poi4.id, order_in_the_game: 5)
 hint2 = Hint.create!(content: "Le roi de la savane peut être le roi des villes.", enigma_id: enigma5.id)
 
-answer1 = Answer.create(enigma_id: enigma5.id, is_good_answer: true, content: "goodanswer", poster_url: "https://imagizer.imageshack.com/img923/6126/9rCgG9.jpg.jpg")
+answer1 = Answer.create(enigma_id: enigma5.id, is_good_answer: true, content: "goodanswer", poster_url: "https://imagizer.imageshack.com/img923/6126/9rCgG9.jpg")
 answer2 = Answer.create(enigma_id: enigma5.id, is_good_answer: false, content: "falseanswer", poster_url: "https://imagizer.imageshack.com/img924/3174/xxrLiC.jpg")
 answer3 = Answer.create(enigma_id: enigma5.id, is_good_answer: false, content: "falseanswer", poster_url: "https://imagizer.imageshack.com/img923/6717/dlwJWQ.jpg")
 answer4 = Answer.create(enigma_id: enigma5.id, is_good_answer: false, content: "falseanswer", poster_url: "https://imagizer.imageshack.com/img924/6107/5TGvHL.jpg")

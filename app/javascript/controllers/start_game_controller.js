@@ -11,8 +11,17 @@ export default class extends Controller {
   start(event) {
     event.preventDefault()
     Swal.fire({
-      title: "Are you sure?",
-      showCancelButton: true
+      title: "Êtes-vous prêt?",
+      showCancelButton: true,
+      confirmButtonText: "Jouer",
+      cancelButtonText: "Annuler",
+      customClass:{
+        popup: "container-startgame",
+        title: 'title-startgame',
+        confirmButton: 'confirmbutton-sg',
+        cancelButton: '',
+
+      }
     })
       .then((result) => {
         if (result.isConfirmed) {

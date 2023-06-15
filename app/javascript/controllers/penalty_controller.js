@@ -1,6 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 import Swal from 'sweetalert2'
+import { Background } from "tsparticles-engine";
 
 
 // Connects to data-controller="penalty"
@@ -27,10 +28,17 @@ export default class extends Controller {
         console.log(data)
         this.timerTarget.outerHTML = data.penalty;
         Swal.fire({
-          title: 'Penalty!',
+          title: 'Penalité!',
           text: 'Vous perdez 1 minute',
+          color: '#FF0303',
           icon: 'error',
-          confirmButtonText: 'Shit'
+          confirmButtonText: 'essaie encore !',
+          customClass:{
+            popup: "container-penalty",
+            title: 'title-penalty',
+            confirmButton: 'confirmbutton-penalty',
+
+          }
         })
       })
   }

@@ -3,10 +3,12 @@
   __________________________
   <p><%= @enigma.description %></p>
 
-  <%# <div class="card_jeu_photo"> %>
+  __________________________
 
+  <%# <div class="card_jeu_photo"> %>
+<h3>Valide ton choix</h3>
   <div class="infos">
-    <%# <h3>Validez votre choix !</h3> %>
+
     <div class="photo_answer">
       <% @enigma.answers.shuffle.each do |answer| %>
         <% if answer.is_good_answer %>

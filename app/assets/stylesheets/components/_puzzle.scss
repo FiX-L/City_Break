@@ -1,0 +1,16 @@
+.puzzle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  row-gap: 0;
+}
+
+
+.tile {
+  background-color: white;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}

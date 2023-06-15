@@ -14,6 +14,11 @@ class PagesController < ApplicationController
   def final_score
   end
 
+  def notes
+
+    @user_game = UserGame.where(user: current_user).last
+  end
+
   # def bombe
   #   @user_game = UserGame.where(user: current_user).last
   # end

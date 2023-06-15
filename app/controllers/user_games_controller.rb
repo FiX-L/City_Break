@@ -35,6 +35,14 @@ class UserGamesController < ApplicationController
     end
   end
 
+  def update
+
+    @user_game = UserGame.find(params[:id])
+    @user_game.update(user_game_params)
+    @user_game.save
+    redirect_to notes_path
+  end
+
 
   def victory
     @user_game = UserGame.find(params[:id])
@@ -51,5 +59,11 @@ class UserGamesController < ApplicationController
     end
 
 
+  end
+
+  private
+
+  def user_game_params
+    params.require(:user_game).permit(:note)
   end
 end

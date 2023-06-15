@@ -1,6 +1,9 @@
 <div class="card_enigme" data-controller="puzzle">
 
   <h1><%= @enigma.title %></h1>
+
+    <p><%= @enigma.description.html_safe %></p>
+
   __________________________
   <p> <%= @enigma.description %> </p>
 
@@ -20,6 +23,7 @@
   <% else %>
       <%= link_to "Continuer", enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1)), class:"continuez" %>
   <% end %>
+
 
 <%# NE PAS SUPPRIMER CE LIEN %>
   <%= link_to "penalty", penalty_path(@user_game, @enigma), class: "false-answer-button d-none", remote: true, data:{action: "click->penalty#send", puzzle_target:"penalty"}  %>

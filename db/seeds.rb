@@ -90,7 +90,7 @@ hint3 = Hint.create!(content: "Cette rosace fut installée à l'aube du 3e mill�
 
 #ETAPE 7 : GRAND PLACE DE LILLE
 poi7 = PointOfInterest.create!(titre: "BRAVO !!!", anecdote: "Tu as triomphé du Pelican ! </br> La ville de Lille te remercie….", poster_url: "https://imagizer.imageshack.com/img923/1715/uRZKnj.jpg")
-enigma8 = Enigma.create!(enigma_type: "resolution_game", title: "Grand Place de Lille", description: "La bombe est cachée sous la fontaine, Pour la désamorcer, regroupes l’ensemble des chiffres que tu as stockée et réponds à cette énigme finale : La fontaine de la déesse est ton dernier arrêt Rappelle-toi du jour où l’appel d’un grand homme a changé notre destinée, valide-le et libère Lille du péché.", game_id: game1.id, point_of_interest_id: poi7.id, order_in_the_game: 8)
+enigma8 = Enigma.create!(enigma_type: "resolution_game", title: "Grand Place de Lille", description: "La bombe est cachée sous la fontaine, Pour la désamorcer, regroupes l’ensemble des chiffres que tu as stocké et réponds à cette énigme finale : </br> La fontaine de la déesse est ton dernier arrêt Rappelle-toi du jour de juin où l’appel d’un grand homme a changé notre destinée </br> valide-le et libère Lille du péché.", game_id: game1.id, point_of_interest_id: poi7.id, order_in_the_game: 8)
 
 enigma9 = Enigma.create!(enigma_type: "bombe", title: "Entrez le code", description: "", game_id: game1.id, order_in_the_game: 9)
 

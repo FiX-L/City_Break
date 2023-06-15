@@ -6,8 +6,7 @@
 
   <h1><%= @enigma.title %></h1>
   __________________________
-  <p><%= @enigma.description %></p>
-
+  <p><%= @enigma.description.html_safe %></p>
 
 
  <% if @enigma.point_of_interest %>

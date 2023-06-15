@@ -1,23 +1,22 @@
 <div class="background_bomb">
-<div class="content_bombe">
-<%# <img src="https://imagizer.imageshack.com/img924/7499/V02y6Y.png" alt=""> %>
-  <div class= "bombe_infos">
+  <div class="content_bombe">
+  <%# <img src="https://imagizer.imageshack.com/img924/7499/V02y6Y.png" alt=""> %>
+    <div class= "bombe_infos">
 
 
-    <h2><%= @enigma.title  %></h2>
-      <div class="validate">
-         <%= form_with url: victory_path(@user_game), method: :post do %>
-          <%= text_field_tag :code,
-              params[:code],
-              placeholder: "rentrez le code"%>
-          <%= submit_tag "desactiver" %>
+      <h2><%= @enigma.title  %></h2>
+        <div class="validate">
+          <%= form_with url: victory_path(@user_game), method: :post do %>
+            <%= text_field_tag :code,
+                params[:code],
+                placeholder: "rentrez le code"%>
 
-
-        <% end %>
-        </div>
+            <%= submit_tag "desactiver" %>
+          <% end %>
+          </div>
+    </div>
+    <div class="code-input">
   </div>
-  <div class="code-input">
-</div>
 
 </div>
 </div>

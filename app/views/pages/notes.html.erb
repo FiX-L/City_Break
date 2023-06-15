@@ -9,10 +9,11 @@
 
   <%= simple_form_for @user_game do |f|%>
     <%= f.input_field :note, id: "note", placeholder: "Saisissez votre note ici", value: @user_game.note, label: false%>
-    <%= f.submit %>
+    <%= f.submit class: "d-none" %>
   <% end %>
-
+<div class="content-btn">
   <button class="enregistrer" onclick="saveNote()">Enregistrer</button>
+  </div>
   </div>
   <div class="navbar_home">
 <div class='profil'>

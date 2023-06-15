@@ -21,6 +21,7 @@
     <%= link_to "next", enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1)) %>
   <% end %>
 
+<%# NE PAS SUPPRIMER CE LIEN %>
   <%= link_to "penalty", penalty_path(@user_game, @enigma), class: "false-answer-button d-none", remote: true, data:{action: "click->penalty#send", puzzle_target:"penalty"}  %>
 
 </div>

@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   post 'pages/bombe', to: 'pages#bombe_answer'
   get 'pages/ending_adventure_show', to: 'pages#ending_adventure_show', as: 'ending_adventure_show'
   get 'pages/defeat', to: 'pages#defeat', as: 'defeat'
+  get '/final_score', to: 'pages#final_score', as: 'final_score'
+
 
 
   get '/hint', to: "pages#hint"

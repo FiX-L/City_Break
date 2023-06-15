@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr;
   width: 100%;
   row-gap: 0;
+  margin-bottom: 16px;
 }
 
 
@@ -13,4 +14,5 @@
   justify-content: center;
   align-items: center;
   background-size: cover;
+  border: 1px solid rgb(35, 34, 34);
 }

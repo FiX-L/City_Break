@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   post 'pages/bombe', to: 'pages#bombe_answer'
   get 'pages/ending_adventure_show', to: 'pages#ending_adventure_show', as: 'ending_adventure_show'
   get 'pages/defeat', to: 'pages#defeat', as: 'defeat'
+  get 'pages/notes', to: 'pages#notes', as: 'notes'
 
 
   get '/hint', to: "pages#hint"

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Gloria+Hallelujah&family=Inter+Tight:wght@100&family=Sarala&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Gloria+Hallelujah&family=Inter+Tight:wght@100&family=Raleway&family=Sarala&family=Satisfy&display=swap');
 
 .card_enigme-container{
   background-color: black;
@@ -49,17 +49,24 @@
   margin-top: 15px;
   font-size: 30px;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Satisfy', cursive;
   padding-bottom: -28px;
   margin-bottom: -15px;
 }
 
+.card_enigme h3{
+  font-weight: bold;
+  margin-top: 20px;
+  font-family: 'Satisfy', cursive;
+}
+
 .card_enigme p{
-  font-size: 20px;
+  font-size: 25px;
   margin-left: 10px;
   margin-top: 40px;
   margin-right: 10px;
   color: #121010;
+  font-family: 'Satisfy', cursive;
 }
 
 
@@ -164,4 +171,18 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+
+.desactiver{
+  display: inline-block;
+  background-color: #b10404;
+  border-radius: 10px;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 22px;
+  padding: 10px;
+  text-decoration: none;
+  margin-bottom: 10px;
+  margin-top:20px;
 }

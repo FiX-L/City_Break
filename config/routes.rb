@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'pages/ending_adventure_show', to: 'pages#ending_adventure_show', as: 'ending_adventure_show'
   get 'pages/defeat', to: 'pages#defeat', as: 'defeat'
   get '/final_score', to: 'pages#final_score', as: 'final_score'
+  get 'pages/notes', to: 'pages#notes', as: 'notes'
 
 
 

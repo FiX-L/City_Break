@@ -15,3 +15,6 @@ application.register("hello", HelloController)
 
 import PenaltyController from "./penalty_controller"
 application.register("penalty", PenaltyController)
+
+import StartGameController from "./start_game_controller"
+application.register("start-game", StartGameController)

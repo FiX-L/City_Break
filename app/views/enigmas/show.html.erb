@@ -1,32 +1,28 @@
 <div class="card_enigme-container">
   <div class="content_cards" data-controller="penalty">
-
     <%= render "shared/timer"  %>
       <% case @enigma.enigma_type %>
-
         <% when "figuresenigma" %>
           <%= render 'figuresenigma' %>
         <% when "photos_QCM" %>
           <%= render 'photos_QCM' %>
         <% when "minigame" %>
           <%= render 'minigame' %>
-
         <% when "bombe" %>
           <%= render 'bombe' %>
         <% when "resolution_game" %>
           <%= render 'resolution_game' %>
       <% end %>
-    </div>
     <div class="navbar_inside">
       <div class="home">
-      <%= link_to home_path do %>
+        <%= link_to home_path do %>
         <a class="home" href="#"><i class="fa fa-fw fa-home"></i></a>
          <% end %>
-        </div>
+      </div>
         <%# <a href="#"><i class="fa fa-fw fa-user"></i> Profil</a> %>
         <%# <a href="#"><i class="fa fa-fw fa-circle-info" ></i> Indices</a> %>
         <div class="indices" >
-        <a onclick="window.dialog.showModal();"><i class="fa fa-fw fa-circle-info"></i></a>
+          <a onclick="window.dialog.showModal();"><i class="fa fa-fw fa-circle-info"></i></a>
         </div>
         <dialog id="dialog">
           <div class="popup-text">
@@ -41,11 +37,10 @@
           </div>
         </dialog>
       <div class="bombe">
-      <%= link_to bombe_path do %>
-     <i class="fa fa-fw fa-bomb"></i>
-      <% end %>
+        <%= link_to enigma_path(Enigma.last) do %>
+        <i class="fa fa-fw fa-bomb"></i>
+        <% end %>
       </div>
     </div>
-
+  </div>
 </div>
-

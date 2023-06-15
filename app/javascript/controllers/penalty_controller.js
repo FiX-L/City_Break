@@ -1,5 +1,8 @@
 import { Controller } from "@hotwired/stimulus"
 
+import Swal from 'sweetalert2'
+
+
 // Connects to data-controller="penalty"
 export default class extends Controller {
   static targets = ["timer"]
@@ -23,6 +26,14 @@ export default class extends Controller {
       .then((data) => {
         console.log(data)
         this.timerTarget.outerHTML = data.penalty;
+        Swal.fire({
+          title: 'Penalty!',
+          text: 'Vous perdez 1 minute',
+          icon: 'error',
+          confirmButtonText: 'Shit'
+        })
       })
   }
+
+
 }

@@ -8,16 +8,12 @@ Rails.application.routes.draw do
   get '/tutoriel', to: "pages#tutoriel"
   get '/reglages', to: "pages#reglages"
   get '/profil', to: "pages#profil"
-  get 'pages/bombe', to: 'pages#bombe', as: 'bombe'
-  post 'pages/bombe', to: 'pages#bombe_answer'
   get 'pages/ending_adventure_show', to: 'pages#ending_adventure_show', as: 'ending_adventure_show'
   get 'pages/defeat', to: 'pages#defeat', as: 'defeat'
-
-
   get '/hint', to: "pages#hint"
   get '/user_games/:user_game_id/enigma/:enigma_id', to: "user_games#penalty", as: "penalty"
 
-
+  post "/user_games/:id/victory", to: "user_games#victory", as: 'victory'
 
   resources :games do
     # resources :user_games, only: [:create]

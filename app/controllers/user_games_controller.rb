@@ -36,9 +36,20 @@ class UserGamesController < ApplicationController
   end
 
 
-  def bombe_answer
+  def victory
+    @user_game = UserGame.find(params[:id])
+
     if params["code"] == "3492179918"
+
+      @user_game.succeeded_at = Time.now
+      @user_game.save
       redirect_to ending_adventure_show_path
+    else
+      @user_game.penalty += 1
+      @user_game.save
+      redirect_to enigma_path(Enigma.last)
     end
+
+
   end
 end

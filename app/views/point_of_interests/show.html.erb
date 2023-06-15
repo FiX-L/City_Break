@@ -1,9 +1,11 @@
+<div class="card_enigme-container">
+
+<div class= "content_cards">
 <%= render "shared/timer"  %>
-
-
-
+  <div class= "card_enigme">
 <h1>BRAVO !</h1>
-<h1><%=@point_of_interest.titre %></h1>
+_________________________
+<h2><%=@point_of_interest.titre %></h2>
 
 
 <p><%= @point_of_interest.anecdote %></p>
@@ -11,8 +13,29 @@
 <div class="poster">
  <img src="<%=@point_of_interest.poster_url %>" alt="">
 </div>
+<br>
+<h2>Prochaine étape</h2>
 
-<h1>Prochaine étape</h1>
 <p><%= @point_of_interest.indication_next_step %></p>
+<%= link_to "Continuer",enigma_path(Enigma.find_by_order_in_the_game(@point_of_interest.enigma.order_in_the_game + 1)), class:"continuez" %>
 
-<%= link_to "Continuer" ,enigma_path(Enigma.find_by_order_in_the_game(@point_of_interest.enigma.order_in_the_game + 1)) %>
+</div>
+
+
+
+
+</div>
+
+
+<div class="navbar_inside">
+<div class="home">
+  <a class="home" href="#"><i class="fa fa-fw fa-home"></i></a>
+  </div>
+  <%# <a href="#"><i class="fa fa-fw fa-user"></i> Profil</a> %>
+  <%# <a href="#"><i class="fa fa-fw fa-circle-info" ></i> Indices</a> %>
+
+<div class="bombe">
+  <a href="#"><i class="fa fa-fw fa-bomb"></i> Bombe</a>
+  </div>
+</div>
+</div>

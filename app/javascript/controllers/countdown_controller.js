@@ -6,11 +6,12 @@ export default class extends Controller {
   connect() {
     console.log("Connected to countdown controller");
     this.secondsUntilEnd = this.countdownTarget.dataset.secondsUntilEndValue;
+    //this.secondsUntilEnd = 2;
     console.log(this.secondsUntilEnd);
     const now = new Date().getTime();
     this.endTime = new Date(now + this.secondsUntilEnd * 1000);
 
-    this.countdown = setInterval(this.countdown.bind(this), 250);
+    this.countdown = setInterval(this.countdown.bind(this), 5);
   }
 
   countdown() {
@@ -19,6 +20,8 @@ export default class extends Controller {
 
     if (secondsRemaining <= 0) {
       clearInterval(this.countdown);
+
+      window.location = "/pages/defeat";
       this.countdownTarget.innerHTML = "Countdown is over!";
       return;
     }

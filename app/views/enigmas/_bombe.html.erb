@@ -1,0 +1,33 @@
+
+<div class="content_bombe">
+  <div class= "bombe_infos">
+
+    <h2> @enigma.title </h2>
+        <%= link_to penalty_path(@user_game, @enigma), class: "false-answer-button", remote: true, data:{action: "click->penalty#send"} do %>
+         <%= form_with url: enigma_path, method: :post do %>
+          <%= text_field_tag :code,
+              params[:code],
+              placeholder: "12345"%>
+          <%= submit_tag "desactiver" %>
+        <% end %>
+      <% end %>
+  </div>
+  <div class="code-input">
+
+
+  <!-- Contenu à désactiver -->
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div class="navbar_home">
+  <a href="" onclick="history.back()">
+    <i class="fa-solid fa-arrow-left"></i> Back
+  </a>
+</div>

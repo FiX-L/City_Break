@@ -1,72 +1,193 @@
-.navbar_game {
-  width: 100%;
-  background-color: #ffffff;
-  overflow: visible;
-  display: flex;
-  justify-content: space-between;
-  padding-left: 30px;
-  padding-right: 30px;
+.navbar_home{
   position: fixed;
   bottom: 0;
-  z-index: 1;
-}
-
-.navbar_game a {
-  float: left;
-  text-align: center;
-  padding: 12px;
-  color: #255050;
-  text-decoration: none;
-  font-size: 12px;
-}
-
-.navbar_game a:hover {
-  background-color: #a6c3c3;
-}
-
-@media (min-width: 992px) {
-  .navbar_game {
-    width: 30%;
-    margin: 0 auto;
-  }
-}
-
-
-
-
-.navbar_home {
-
+  left: 0;
   width: 100%;
-  background-color: #ffffff;
-  overflow: visible;
+  height:60px;
+  display: flex;
+  justify-content: space-evenly;
+  background: rgba(37, 10, 47, 0.8);
+}
+
+.navbar_home .profil{
+  height: 70px;
+  width: 70px;
   display: flex;
   justify-content: center;
-  padding-left: 30px;
-  padding-right: 30px;
+}
+
+.navbar_home .profil a{
+  color:rgb(255, 254, 254);
+  font-size:40px;
+}
+
+.navbar_home .profil a:hover {
+  color: #094bae;
+}
+
+
+.navbar_home .regles{
+
+height: 70px;
+width: 70px;
+display: flex;
+justify-content: center;
+}
+
+.navbar_home .regles a{
+color:rgb(255, 254, 254);
+font-size:40px;
+}
+
+.navbar_home .regles a:hover {
+  color: #094bae;
+}
+
+
+.navbar_home .reglages{
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar_home .reglages a{
+  color:rgb(255, 254, 254);
+  font-size:40px;
+}
+
+.navbar_home .reglages a:hover {
+  color: #094bae;
+}
+
+
+// *****************************************************************
+
+
+.navbar_game{
   position: fixed;
   bottom: 0;
-  z-index: 1;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-evenly;
+  background: rgba(37, 10, 47, 0.8);
+}
+
+.navbar_game .play{
+  height: 70px;
+  width: 70px;
+  text-align:center;
+
+}
+
+.navbar_game .play a{
+  color:rgb(255, 254, 254);
+  font-size:40px;
+}
+
+.navbar_game .play a:hover {
+  color: #094bae;
+}
+
+// *****************************************************************
+
+
+.navbar_inside{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-evenly;
+  background: rgba(37, 10, 47, 0.8);
+}
+
+.navbar_inside .home{
+  height: 70px;
+  width: 70px;
+  text-align:center;
+
+}
+
+.navbar_inside .home a{
+  color:rgb(255, 254, 254);
+  font-size:40px;
+}
+
+.navbar_inside .home a:hover {
+  color: #094bae;
+}
+
+.navbar_inside .indices{
+  height: 70px;
+  width: 70px;
+  text-align:center;
+
+}
+
+.navbar_inside .indices a{
+  color:rgb(255, 254, 254);
+  font-size:40px;
+}
+
+.navbar_inside .indices a:hover {
+  color: #094bae;
 }
 
 
-.navbar_home a {
-  float: left;
-  text-align: center;
-  padding: 12px;
-  color: #255050;
-  text-decoration: none;
-  font-size: 15px;
+.navbar_inside .bombe{
+  height: 70px;
+  width: 70px;
+  text-align:center;
+
+}
+
+.navbar_inside .bombe a{
+  color:rgb(255, 254, 254);
+  font-size:40px;
+}
+
+.navbar_inside .bombe a:hover {
+  color: #094bae;
 }
 
 
-.navbar_home a:hover {
-  background-color: #a6c3c3;
-}
 
 
-@media (min-width: 992px) {
-  .navbar_home {
-    width: 30%;
-    margin: 0 auto;
-  }
-}
+
+
+
+
+
+
+
+
+
+// .navbar_game {
+//   width: 100%;
+//   background-color: #ffffff;
+//   overflow: visible;
+//   display: flex;
+//   justify-content: space-between;
+//   padding-left: 30px;
+//   padding-right: 30px;
+//   position: fixed;
+//   bottom: 0;
+//   z-index: 1;
+// }
+
+// .navbar_game a {
+//   float: left;
+//   text-align: center;
+//   padding: 12px;
+//   color: #255050;
+//   text-decoration: none;
+//   font-size: 12px;
+// }
+
+// .navbar_game a:hover {
+//   background-color: #a6c3c3;
+// }

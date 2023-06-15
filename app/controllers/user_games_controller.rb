@@ -29,6 +29,16 @@ class UserGamesController < ApplicationController
     @user_game.penalty += 1
     @user_game.save
     @enigma = Enigma.find(params[:enigma_id])
-    redirect_to enigma_path(@enigma)
+
+    respond_to do |format|
+      format.json
+    end
+  end
+
+
+  def bombe_answer
+    if params["code"] == "3492179918"
+      redirect_to ending_adventure_show_path
+    end
   end
 end

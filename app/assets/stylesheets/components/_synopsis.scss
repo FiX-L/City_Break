@@ -1,12 +1,19 @@
+.principal-synop {
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  overflow-y: auto;
+}
+
 
 .synopsis-font{
   position: relative;
   background-image: url(https://imagizer.imageshack.com/img922/4516/YDwAGh.jpg);
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 100%;
   overflow-y: auto;
-  margin-bottom: 50px;
+  margin-bottom: 69px;
   // margin-bottom: 0;
   // ☝🏻 choisir entre 50px ou Opx en fonction de l'affichage souhaité
 }

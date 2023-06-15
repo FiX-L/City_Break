@@ -1,9 +1,11 @@
-
+<div class="background_bomb">
 <div class="content_bombe">
+<%# <img src="https://imagizer.imageshack.com/img924/7499/V02y6Y.png" alt=""> %>
   <div class= "bombe_infos">
 
-    <h2><%= @enigma.title  %></h2>
 
+    <h2><%= @enigma.title  %></h2>
+      <div class="validate">
          <%= form_with url: victory_path(@user_game), method: :post do %>
           <%= text_field_tag :code,
               params[:code],
@@ -12,15 +14,13 @@
 
 
         <% end %>
+        </div>
   </div>
   <div class="code-input">
-
-
-  <!-- Contenu à désactiver -->
 </div>
 
 </div>
-
+</div>
 
 
 

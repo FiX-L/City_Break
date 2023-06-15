@@ -1,24 +1,38 @@
-.content_bombe{
+.background_bomb{
   background-color: black;
-  height: 926px;
-  // width: 390px;
-
-  background-image: url(https://imagizer.imageshack.com/img923/2696/ISfX0D.jpg);
-  background-repeat: no-repeat;
-
-
+  background-size: cover;
+  background-position: center;
+  overflow-y: auto;
+  height: 100%;
+  margin-top: -113px;
 
 }
 
+// .content_bombe img{
+//   height: 100%;
+// width:100%;
+
+
+
+
+.bombe_infos{
+margin-bottom: 10px;
+}
 
 .bombe_infos h2{
   // color: white;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 275px;
-  color: white;
+align-items: center;
+justify-content: center;
+padding-top: 275px;
+color: #b21b1b;
+font-size: 40px;
 
+}
+
+.validate{
+  display:flex;
+  justify-content:center;
 }
 
 @keyframes shake {

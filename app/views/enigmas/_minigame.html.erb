@@ -2,16 +2,16 @@
 
   <h1><%= @enigma.title %></h1>
   __________________________
-  <p> <%= @enigma.description %> </p>
+  <p> <%= @enigma.description.html_safe %> </p>
 
   <div class="puzzle" data-puzzle-target="puzzle">
-    <div class="tile" data-puzzle-target="tile" data-order="1" style='background-image: url(<%=asset_url("1.jpg")%>);'></div>
-    <div class="tile" data-puzzle-target="tile" data-order="2" style='background-image: url(<%=asset_url("2.jpg")%>);'></div>
-    <div class="tile" data-puzzle-target="tile" data-order="3" style='background-image: url(<%=asset_url("3.jpg")%>);'></div>
-    <div class="tile" data-puzzle-target="tile" data-order="4" style='background-image: url(<%=asset_url("4.jpg")%>);'></div>
-    <div class="tile" data-puzzle-target="tile" data-order="5" style='background-image: url(<%=asset_url("5.jpg")%>);'></div>
     <div class="tile" data-puzzle-target="tile" data-order="6" style='background-image: url(<%=asset_url("6.jpg")%>);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="1" style='background-image: url(<%=asset_url("1.jpg")%>);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="4" style='background-image: url(<%=asset_url("4.jpg")%>);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="2" style='background-image: url(<%=asset_url("2.jpg")%>);'></div>
     <div class="tile" data-puzzle-target="tile" data-order="7" style='background-image: url(<%=asset_url("7.jpg")%>);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="3" style='background-image: url(<%=asset_url("3.jpg")%>);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="5" style='background-image: url(<%=asset_url("5.jpg")%>);'></div>
     <div class="tile" data-puzzle-target="tile" data-order="8" style='background-image: url(<%=asset_url("8.jpg")%>);'></div>
   </div>
   <% if @enigma.point_of_interest %>

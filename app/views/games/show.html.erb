@@ -5,23 +5,16 @@
           <h2>Alerte à Lille</h2>
         </div>
         <div class="synopsis">
-          <p><%= @game.synopsis %></p>
+          <p><%= @game.synopsis.html_safe %></p>
         </div>
     </div>
   </div>
-</div>
-<div class="navbar_game">
-
-  <div class="play" data-controller="start-game">
-
-<a href="">
-  <i class="fa fa-fw fa-play" data-action= "click->start-game#start"></i>
-</a>
-
-
-    <%= link_to game_user_games_path(@game),class: "d-none", data: { turbo_method: "POST", start_game_target: "start"} do %>
-      <i class="fa fa-fw fa-play"></i>
-    <% end %>
+  <div class="navbar_game">
+    <div class="play" data-controller="start-game">
+      <a href=""><i class="fa fa-fw fa-play" data-action= "click->start-game#start"></i></a>
+        <%= link_to game_user_games_path(@game),class: "d-none", data: { turbo_method: "POST", start_game_target: "start"} do %>
+          <i class="fa fa-fw fa-play"></i>
+        <% end %>
+    </div>
   </div>
-
 </div>

@@ -8,6 +8,16 @@
   <p> <%= @enigma.description %> </p>
 
   <div class="puzzle" data-puzzle-target="puzzle">
+<<<<<<< HEAD
+    <div class="tile" data-puzzle-target="tile" data-order="1" style='background-image: url(<%=asset_url("1")%>);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="2" style='background-image: url(<%=asset_url("2")%>);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="3" style='background-image: url(<%=asset_url("3")%>);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="4" style='background-image: url(<%=asset_url("4")%>);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="5" style='background-image: url(<%=asset_url("5")%>);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="6" style='background-image: url(<%=asset_url("6")%>);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="7" style='background-image: url(<%=asset_url("7")%>);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="8" style='background-image: url(<%=asset_url("8")%>);'></div>
+=======
 
     <div class="tile" data-puzzle-target="tile" data-order="4" style='background-image: url(/assets/4.jpg);'></div>
     <div class="tile" data-puzzle-target="tile" data-order="8" style='background-image: url(/assets/8.jpg);'></div>
@@ -18,6 +28,7 @@
     <div class="tile" data-puzzle-target="tile" data-order="6" style='background-image: url(/assets/6.jpg);'></div>
     <div class="tile" data-puzzle-target="tile" data-order="7" style='background-image: url(/assets/7.jpg);'></div>
 
+>>>>>>> 6b095b2e2fa4e5c3fa2efc258c324d27253dc709
   </div>
   <% if @enigma.point_of_interest %>
     <%= link_to "Continuer", point_of_interest_path(@enigma.point_of_interest), class: "continuez", data:{action: "click->puzzle#validate"}%>

@@ -1,23 +1,18 @@
 <div class="card_enigme" data-controller="puzzle">
 
   <h1><%= @enigma.title %></h1>
-
-    <p><%= @enigma.description.html_safe %></p>
-
   __________________________
+  <p> <%= @enigma.description %> </p>
 
   <div class="puzzle" data-puzzle-target="puzzle">
-
-
-    <div class="tile" data-puzzle-target="tile" data-order="4" style='background-image: url(/assets/4.jpeg);'></div>
-    <div class="tile" data-puzzle-target="tile" data-order="8" style='background-image: url(/assets/8.jpeg);'></div>
-    <div class="tile" data-puzzle-target="tile" data-order="2" style='background-image: url(/assets/2.jpeg);'></div>
-    <div class="tile" data-puzzle-target="tile" data-order="5" style='background-image: url(/assets/5.jpeg);'></div>
-    <div class="tile" data-puzzle-target="tile" data-order="1" style='background-image: url(/assets/1.jpeg);'></div>
-    <div class="tile" data-puzzle-target="tile" data-order="3" style='background-image: url(/assets/3.jpeg);'></div>
-    <div class="tile" data-puzzle-target="tile" data-order="6" style='background-image: url(/assets/6.jpeg);'></div>
-    <div class="tile" data-puzzle-target="tile" data-order="7" style='background-image: url(/assets/7.jpeg);'></div>
-
+    <div class="tile" data-puzzle-target="tile" data-order="1" style='background-image: url(<%=asset_url("1")%>);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="2" style='background-image: url(<%=asset_url("2")%>);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="3" style='background-image: url(<%=asset_url("3")%>);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="4" style='background-image: url(<%=asset_url("4")%>);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="5" style='background-image: url(<%=asset_url("5")%>);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="6" style='background-image: url(<%=asset_url("6")%>);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="7" style='background-image: url(<%=asset_url("7")%>);'></div>
+    <div class="tile" data-puzzle-target="tile" data-order="8" style='background-image: url(<%=asset_url("8")%>);'></div>
   </div>
   <% if @enigma.point_of_interest %>
     <%= link_to "Continuer", point_of_interest_path(@enigma.point_of_interest), class: "continuez", data:{action: "click->puzzle#validate"}%>
@@ -25,7 +20,6 @@
   <% else %>
       <%= link_to "Continuer", enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1)), class:"continuez" %>
   <% end %>
-
 
 <%# NE PAS SUPPRIMER CE LIEN %>
   <%= link_to "penalty", penalty_path(@user_game, @enigma), class: "false-answer-button d-none", remote: true, data:{action: "click->penalty#send", puzzle_target:"penalty"}  %>

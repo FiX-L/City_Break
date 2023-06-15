@@ -1,22 +1,28 @@
 <div class="card_enigme">
-      <%# <br>
-      <br>
-      <br>
-      <br> %>
 
   <h1><%= @enigma.title %></h1>
   __________________________
-  <p><%= @enigma.description %></p>
 
- <% if @enigma.point_of_interest %>
-      <%= link_to "next", point_of_interest_path(@enigma.point_of_interest) %>
 
-    <% else %>
-      <%= link_to "next", enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1)) %>
-      <% end %>
-      <%# <br>
-      <br>
-      <br>
-      <br> %>
+
+
+  <div class="puzzle" data-controller="puzzle">
+    <div class="tile">1</div>
+    <div class="tile">2</div>
+    <div class="tile">3</div>
+    <div class="tile">4</div>
+    <div class="tile">5</div>
+    <div class="tile">6</div>
+    <div class="tile">7</div>
+    <div class="tile">8</div>
+  </div>
+
+  <% if @enigma.point_of_interest %>
+    <%= link_to "next", point_of_interest_path(@enigma.point_of_interest) %>
+
+  <% else %>
+    <%= link_to "next", enigma_path(Enigma.find_by_order_in_the_game(@enigma.order_in_the_game + 1)) %>
+  <% end %>
+
 
 </div>

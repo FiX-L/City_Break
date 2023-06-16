@@ -96,9 +96,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_15_144813) do
     t.bigint "user_id"
     t.bigint "game_id"
     t.datetime "end_of_game_time"
-    t.integer "penalty", default: 0
     t.datetime "succeeded_at"
     t.integer "score"
+    t.integer "penalty", default: 0
     t.text "note"
     t.index ["game_id"], name: "index_user_games_on_game_id"
     t.index ["user_id"], name: "index_user_games_on_user_id"

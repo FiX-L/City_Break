@@ -1,5 +1,11 @@
+<div class="content_home">
+<div class="toplane">
+    <img src="http://imagizer.imageshack.com/v2/976x487q50/r/922/dGtfvR.png" alt="">
+  </div>
 <div class="loggg">
-  <h2>Log in</h2>
+ <div class="logbg">
+
+  <h2>Connexion</h2>
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form-inputs">
       <%= f.input :email,
@@ -7,15 +13,18 @@
                   autofocus: true,
                   input_html: { autocomplete: "email" } %>
       <%= f.input :password,
-                  required: false,
-                  input_html: { autocomplete: "current-password" } %>
-      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+            required: false,
+            label: "Mot de passe",
+            input_html: { autocomplete: "current-password" } %>
+      <%= f.input :remember_me, label: "Se souvenir de moi",  as: :boolean if devise_mapping.rememberable? %>
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Log in" %>
+      <%= f.button :submit, "Se connecter" %>
     </div>
   <% end %>
 
   <%= render "devise/shared/links" %>
+  </div>
+</div>
 </div>

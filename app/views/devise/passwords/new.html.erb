@@ -1,4 +1,11 @@
-<h2>Forgot your password?</h2>
+<div class="content_home">
+<div class="toplane">
+    <img src="http://imagizer.imageshack.com/v2/976x487q50/r/922/dGtfvR.png" alt="">
+  </div>
+  <div class="loggg">
+ <div class="logbg">
+
+<h2>Mot de passe oublié</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= f.error_notification %>
@@ -11,8 +18,11 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
+    <%= f.button :submit, "Réinitialiser mot de passe" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+</div>
+</div>

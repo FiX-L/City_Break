@@ -1,4 +1,11 @@
-<h2>Sign up</h2>
+<div class="content_home">
+<div class="toplane">
+    <img src="http://imagizer.imageshack.com/v2/976x487q50/r/922/dGtfvR.png" alt="">
+  </div>
+  <div class="loggg">
+ <div class="logbg">
+
+<h2>Créer un compte</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -10,16 +17,21 @@
                 input_html: { autocomplete: "email" }%>
     <%= f.input :password,
                 required: true,
+                label: "Mot de passe",
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :password_confirmation,
                 required: true,
+                label: "Mot de passe",
                 input_html: { autocomplete: "new-password" } %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Créer un compte" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+</div>
+</div>
